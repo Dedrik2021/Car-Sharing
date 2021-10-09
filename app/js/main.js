@@ -1,8 +1,4 @@
 $(function() {
-    $('.hero-form__date').datepicker();
-});
-
-$(function() {
 
     $(window).scroll(function() {
         if ($(this).scrollTop() > 1){
@@ -83,6 +79,5 @@ $(function() {
 
     $('.footer__select').styler();
 
-    // $('.hero-form__date').datepicker();
+    $('.hero-form__date').datepicker();
 });
-
