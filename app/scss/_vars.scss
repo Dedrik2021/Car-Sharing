@@ -1,0 +1,47 @@
+$white: #ffff;
+$white-100: #f8f8f8;
+$white-200: #e8e8e8;
+
+$green: #82c141;
+
+$yellow: #f5a623;
+
+$blue: #00a5f4;
+
+$gray: #7c7c7c;
+$gray-100: #535353;
+$gray-200: #979797;
+
+$black: #303030;
+$black-100: #000000;
+
+$mulish: 'Mulish', sans-serif;
+
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
+@mixin r($width) {
+    
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
+$mobile-xxl: 1350px;
+$mobile-xl: 1100px;
+$mobile-lg: 992px;
+$mobile-md: 769px;
+$mobile-sm: 576px;
+
+@mixin line-clamp($rows: 1) {
+    -webkit-line-clamp: $rows;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

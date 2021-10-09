@@ -1,0 +1,227 @@
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 11;
+    padding: 20px 0;
+    transition: background-color 0.3s, padding 0.4s;
+
+    @include r($mobile-sm) {
+        padding: 10px 0;
+    }
+
+    &.sticky {
+        background-color: $yellow;
+        padding: 10px 0;
+
+        @include r($mobile-md) {
+            padding: 5px 0;
+        }
+
+        
+        .menu__box {
+
+            @include r($mobile-md) {
+                height: calc(100vh - 55px);
+                top: 55px;
+            }
+        }
+
+        .menu__btn {
+            padding: 10px 20px;
+
+            @include r($mobile-lg) {
+                padding: 5px 10px;
+            }
+        }
+
+        .menu__burger {
+
+            &.active {
+
+                span {
+
+                    &::after,
+                    &::before {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+
+        @include r($mobile-sm) {
+            background-color: $yellow;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        left: 44%;
+
+        @include r($mobile-xl) {
+            left: 32%;
+        }
+
+        @include r($mobile-md) {
+            position: relative;
+            left: 0;
+        }
+
+        &:focus {
+            outline-color: $blue;
+        }
+    }
+
+}
+
+.menu {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @include r($mobile-md) {
+            position: fixed;
+            display: block;
+            right: -100%;
+            top: 0;
+            z-index: -5;
+            width: 40%;
+            overflow: auto;
+            height: 100vh;
+            text-align: center;
+            background-color: $white-200;
+            padding: 60px 0 40px;
+            border-top: none;
+            transition: right 0.4s, background-color 0.4s, padding-top 0.7s, border-color 0.4s, top 0.2s;
+        }
+
+        @include r($mobile-sm) {
+            width: 100%;
+            padding: 80px 0 100px;
+            top: 65px;
+        }
+
+        &.active {
+            right: 0;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        
+        @include r($mobile-md) {
+            display: block;
+        }
+
+        &:not(:last-child) {
+
+            @include r($mobile-md) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 10px;
+
+            @include r($mobile-md) {
+                margin: 0 0 20px;
+            }
+        }
+    }
+
+    &__btn {
+        color: $white;
+        text-transform: uppercase;
+        padding: 15px 20px;
+        transition: color 0.3s, background-color 0.4s, transform 0.4s;
+        @include line-clamp(1);
+
+        @include r($mobile-lg) {
+            padding: 10px;
+        }
+
+        @include r($mobile-md) {
+            color: $black-100;
+            font-size: 18px;
+        }
+    }
+
+    
+    &__burger {
+        display: none;
+        position: relative;
+        width: 45px;
+        height: 45px;
+        z-index: 5;
+        border-radius: 50%;
+
+        span::before,
+        span::after,
+        span {
+            position: absolute;
+            top: 50%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -12px;
+            width: 25px;
+            height: 2px;
+            content: "";
+            background-color: $white;
+            transition: transform 0.4s, background-color 0.4s;
+        }
+
+        @include r($mobile-md) {
+            display: block;
+        }
+
+        span {
+
+            &::before {
+                transform: translateY(-8px);
+            }
+
+            &::after {
+                transform: translateY(8px);
+            }
+        }
+
+        &.active {
+
+            span {
+                height: 0;
+
+                &::before {
+                    transform: rotate(45deg);
+                    background-color: $black-100;
+
+                    @include r($mobile-sm) {
+                        background-color: $white;
+                    }
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                    background-color: $black-100;
+
+                    @include r($mobile-sm) {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'libs';
+
+@import './components/header';
+@import './components/footer';
+@import './components/tabs-btn';
+
+@import './index-page';

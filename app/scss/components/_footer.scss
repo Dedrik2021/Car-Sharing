@@ -1,0 +1,303 @@
+.footer {
+    background-color: $black;
+    padding-top: 55px;
+
+    @include r($mobile-lg) {
+        padding-top: 40px;
+    }
+
+    &__wrapper {
+        margin-bottom: 65px;
+        display: flex;
+        justify-content: center;
+
+        @include r($mobile-lg) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__top {
+        padding-bottom: 40px;
+        border-bottom: 1px solid $gray-100;
+
+        @include r($mobile-sm) {
+            padding-bottom: 35px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+
+        @include r($mobile-sm) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__lang {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        max-width: 235px;
+        width: 100%;
+
+        @include r($mobile-md) {
+            max-width: 170px;
+            padding-top: 0;
+        }
+
+        @include r($mobile-sm) {
+            max-width: 300px;
+            margin-bottom: 35px;
+        }
+    }
+
+    &__label {
+        color: $white;
+        font-size: 13px;
+        line-height: 2.5;
+        width: 100%;
+    }
+
+    &__select {
+
+        &--currency {
+            text-transform: uppercase;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__nav-top {
+        display: flex;
+
+        @include r($mobile-sm) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__box {
+
+        @include r($mobile-sm) {
+            max-width: 50%;
+            width: 100%;
+        }
+        
+
+        &:not(:last-child) {
+            margin-right: 65px;
+
+            @include r($mobile-md) {
+                margin-right: 30px;
+            }
+
+            @include r($mobile-sm) {
+                margin-right: 0;
+                margin-bottom: 35px;
+            }
+        }
+
+        &:nth-child(1) {
+
+            @include r($mobile-sm) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        }
+
+        &:nth-child(2) {
+
+            @include r($mobile-sm) {
+                margin-bottom: 0;
+                text-align: center;
+            }
+        }
+
+        &:last-child {
+
+            @include r($mobile-sm) {
+                order: -1;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+        color: $white;
+        margin-bottom: 25px;
+
+        @include r($mobile-sm) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__link {
+        color: $white;
+        font-weight: 300;
+        font-size: 13px;
+        text-transform: none;
+        line-height: 1.8;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color 0.4s;
+
+        &:hover {
+            border-bottom-color: $white;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0 25px;
+
+        @include r($mobile-sm) {
+            flex-direction: column;
+            padding: 15px 0;
+        }
+    }
+
+    &__copy {
+        color: $white;
+        font-weight: 300;
+        letter-spacing: 0;
+        max-width: 80%;
+        @include line-clamp(3);
+    }
+}
+
+.jq-selectbox {
+
+    &__select {
+        height: 35px;
+        padding: 0 40px 0 12px;
+        border-radius: 2px;
+        font-size: 13px;
+        font-weight: 300;
+        background: transparent;
+        background-color: $white;
+        box-shadow: none;
+
+        &:hover {
+            background: transparent;
+            background-color: $white;
+        }
+    }
+
+    &__select-text {
+        padding-top: 3px;
+    }
+
+    &__dropdown {
+        width: 100%;
+        margin: 2px 0 0;
+        padding: 0;
+        border: none;
+        border-radius: 2px;
+        background: transparent;
+        background-color: $white;
+        box-shadow: none;
+        bottom: -103px !important;
+
+        .selected.sel {
+            background-color: $yellow;
+
+            &:hover {
+                background-color: $green;
+            }
+        }
+
+        ul {
+            max-height: 200px;
+        }
+
+        li {
+            font: 13px;
+            font-weight: 300;
+            border-radius: 3px;
+            padding: 8px 10px 8px 15px;
+            transition: background-color 0.4s, color 0.4s;
+
+            &:hover {
+                background-color: $green;
+            }
+        }
+    }
+
+    &__trigger {
+        border-left: none;
+    }
+
+    &__trigger-arrow {
+        position: absolute;
+        top: 16px;
+        right: 14px;
+        width: 15px;
+        height: 6px;
+        border: none;
+        background-image: url(../images/content/angle-down.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+
+.social {
+    display: flex;
+    height: 25px;
+
+    @include r($mobile-sm) {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 35px;
+
+            @include r($mobile-sm) {
+                margin-right: 50px;
+            }
+        }
+    }
+
+    &__link {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 20px;
+        height: 25px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color 0.4s;
+
+        &:hover {
+            border-bottom-color: $white;
+        }
+
+        &--facebook {
+            background-image: url(../images/content/facebook-icon.svg);
+        }
+
+        &--tweeter {
+            background-image: url(../images/content/tweeter-icon.svg);
+        }
+
+        &--instagram {
+            background-image: url(../images/content/instagram-icon.svg);
+        }
+    }
+}

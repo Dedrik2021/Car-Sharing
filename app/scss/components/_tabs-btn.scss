@@ -1,0 +1,49 @@
+.tabs-btn {
+    display: flex;
+    margin-bottom: 20px;
+
+    @include r($mobile-lg) {
+        justify-content: center;
+    }
+
+    @include r($mobile-md) {
+        justify-content: flex-start;
+    }
+
+    @include r($mobile-sm) {
+        justify-content: center;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__btn {
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 0.04rem;
+        padding-bottom: 2px;
+        max-width: 300px;
+        border-bottom: 2px solid transparent;
+        transition: color 0.4s, border-bottom-color 0.4s;
+        @include line-clamp(2);
+
+        @include r($mobile-md) {
+            font-size: 14px;
+            line-height: 1.4;
+            padding-bottom: 0;
+        }
+
+        &:hover {
+            color: $yellow;
+        }
+
+        &.active {
+            border-bottom-color: $white;
+            pointer-events: none;
+        }
+    }
+}
