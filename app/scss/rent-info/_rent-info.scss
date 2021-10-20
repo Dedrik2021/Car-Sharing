@@ -165,16 +165,125 @@
     }
 
     &__discount {
-        padding: 20px 30px 17px 60px;
+        padding: 20px 25px 17px 65px;
         border: 1px solid $white-600;
         background-color: $white-500;
+        margin-bottom: 10px;
         position: relative;
 
         &::before {
             content: "";
             position: absolute;
-            
+            width: 35px;
+            height: 35px;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-image: url(../images/content/discount-icon.png);
         }
+    }
+
+    &__avail,
+    &__offer {
+        display: block;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    &__avail {
+        font-weight: 400;
+    }
+
+    &__price {
+        padding: 17px 25px 17px 15px;
+        background-color: $white-100;
+        border: 1px solid $gray-300;
+        border-bottom: none;
+        display: flex;
+    }
+
+    &__total {
+        margin-right: 30px;
+    }
+
+    &__sum-title {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+
+        span {
+            font-size: 28px;
+            color: $yellow;
+            font-weight: 600;
+        }
+    }
+
+    &__includes {
+        font-weight: 300;
+        color: $gray;
+    }
+
+    &__btn {
+        padding: 18px 22px 0;
+        transition: color 0.4s, background-color 0.4s;
+    }
+
+    &__contract {
+        padding: 27px 17px 18px 20px;
+        border: 1px solid $gray-300;
+    }
+
+    &__items {
+        position: relative;
+        padding: 15px 20px 18px 12px;
+        border: 1px solid $gray-600;
+
+        &:not(:last-child) {
+            margin-bottom: 23px;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        font-weight: 700;
+        font-size: 10px;
+        text-transform: uppercase;
+        color: $gray;
+        top: -6px;
+        padding: 0 2px;
+        letter-spacing: 0.02rem;
+        background-color: $white;
+    }
+
+    &__time {
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        
+    }
+
+    &__place {
+        margin-bottom: 20px;
+    }
+
+    &__counter-text,
+    &__counter-title,
+    &__hours,
+    &__time-title,
+    &__address,
+    &__place-title {
+        font-weight: 300;
+        font-size: 13px;
+    }
+
+    &__counter-title,
+    &__time-title,
+    &__place-title {
+        font-weight: 400;
+        display: block;
     }
 }
 

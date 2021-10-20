@@ -55,10 +55,11 @@ a {
 }
 
 .btn {
+    text-transform: uppercase;
     background-color: transparent;
     padding: 0;
     border: none;
-    border-radius: 2px;
+    border-radius: 3px;
     font-weight: 700;
 
     &--blue {
@@ -91,7 +92,10 @@ a {
         }
     }
 
-    &--yellow {
+    &--yellow-hover {
+        color: $white;
+        background-color: $green;
+
 
         &:hover {
             background-color: $yellow;
