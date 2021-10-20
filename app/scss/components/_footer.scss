@@ -16,6 +16,13 @@
         }
     }
 
+    &__logo {
+
+        &:focus {
+            outline-color: $blue;
+        }
+    }
+
     &__top {
         padding-bottom: 40px;
         border-bottom: 1px solid $gray-100;
@@ -155,6 +162,10 @@
         &:hover {
             border-bottom-color: $white;
         }
+
+        &:focus {
+            outline-color: $blue;
+        }
     }
 
     &__bottom {
@@ -175,88 +186,88 @@
         letter-spacing: 0;
         max-width: 80%;
         @include line-clamp(3);
+
+        @include r($mobile-sm) {
+            max-width: 100%;
+        }
     }
-}
 
-.jq-selectbox {
+    .jq-selectbox {
 
-    &__select {
-        height: 35px;
-        padding: 0 40px 0 12px;
-        border-radius: 2px;
-        font-size: 13px;
-        font-weight: 300;
-        background: transparent;
-        background-color: $white;
-        box-shadow: none;
-
-        &:hover {
+        &__select {
+            height: 35px;
+            padding: 0 40px 0 12px;
+            border-radius: 2px;
+            font-size: 13px;
+            font-weight: 300;
             background: transparent;
             background-color: $white;
-        }
-    }
-
-    &__select-text {
-        padding-top: 3px;
-    }
-
-    &__dropdown {
-        width: 100%;
-        margin: 2px 0 0;
-        padding: 0;
-        border: none;
-        border-radius: 2px;
-        background: transparent;
-        background-color: $white;
-        box-shadow: none;
-        bottom: -103px !important;
-
-        .selected.sel {
-            background-color: $yellow;
-
+            box-shadow: none;
+    
             &:hover {
-                background-color: $green;
+                background: transparent;
+                background-color: $white;
             }
         }
-
-        ul {
-            max-height: 200px;
+    
+        &__select-text {
+            padding-top: 2px;
         }
-
-        li {
-            font: 13px;
-            font-weight: 300;
-            border-radius: 3px;
-            padding: 8px 10px 8px 15px;
-            transition: background-color 0.4s, color 0.4s;
-
-            &:hover {
-                background-color: $green;
+    
+        &__dropdown {
+            width: 100%;
+            margin: 2px 0 0;
+            padding: 0;
+            border: none;
+            border-radius: 2px;
+            background: transparent;
+            background-color: $white;
+            box-shadow: none;
+            bottom: -103px !important;
+    
+            .selected.sel {
+                background-color: $yellow;
+    
+                &:hover {
+                    background-color: $green;
+                }
+            }
+    
+            ul {
+                max-height: 200px;
+            }
+    
+            li {
+                border-radius: 3px;
+                padding: 8px 10px 8px 15px;
+                transition: background-color 0.4s, color 0.4s;
+    
+                &:hover {
+                    background-color: $green;
+                }
             }
         }
-    }
-
-    &__trigger {
-        border-left: none;
-    }
-
-    &__trigger-arrow {
-        position: absolute;
-        top: 16px;
-        right: 14px;
-        width: 15px;
-        height: 6px;
-        border: none;
-        background-image: url(../images/content/angle-down.svg);
-        background-repeat: no-repeat;
-        background-position: center;
+    
+        &__trigger {
+            border-left: none;
+        }
+    
+        &__trigger-arrow {
+            position: absolute;
+            top: 15px;
+            right: 14px;
+            width: 15px;
+            height: 6px;
+            border: none;
+            background-image: url(../images/content/angle-down.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
 }
-
 
 .social {
     display: flex;
-    height: 25px;
 
     @include r($mobile-sm) {
         justify-content: center;
@@ -267,16 +278,16 @@
         position: relative;
 
         &:not(:last-child) {
-            margin-right: 35px;
+            margin-right: 15px;
 
             @include r($mobile-sm) {
-                margin-right: 50px;
+                margin-right: 40px;
             }
         }
     }
 
     &__link {
-        position: absolute;
+        display: block;
         background-repeat: no-repeat;
         background-position: center;
         width: 20px;
@@ -298,6 +309,10 @@
 
         &--instagram {
             background-image: url(../images/content/instagram-icon.svg);
+        }
+
+        &:focus {
+            outline-color: $yellow;
         }
     }
 }

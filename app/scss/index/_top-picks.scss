@@ -2,7 +2,7 @@
     padding-bottom: 280px;
     position: relative;
 
-    @include r($mobile-xxl) {
+    @include r($screen-xxl) {
         padding-bottom: 150px;
     }
 
@@ -48,12 +48,12 @@
     }
 
 
-    &__big {
+    &__big-slider {
         max-width: 550px;
         margin-right: 50px;
         border-top: 4px solid $yellow;
 
-        @include r($mobile-xxl) {
+        @include r($screen-xxl) {
             max-width: 450px;
             margin-right: 20px;
         }
@@ -79,7 +79,7 @@
             width: 100%;
             height: 565px;
 
-            @include r($mobile-xxl) {
+            @include r($screen-xxl) {
                 height: 530px;
             }
 
@@ -99,7 +99,7 @@
                 max-width: 550px;
                 height: 300px;
 
-                @include r($mobile-xxl) {
+                @include r($screen-xxl) {
                     max-width: 470px;
                     height: 245px;
                 }
@@ -140,6 +140,13 @@
             padding: 25px 30px 25px 25px;
         }
     
+        &__preferred,
+        &__title,
+        &__size,
+        &__advan{
+            @include line-clamp(2);
+        }
+
         &__preferred {
             padding-left: 30px;
             font-weight: 300;
@@ -148,7 +155,7 @@
             text-transform: uppercase;
             margin-bottom: 15px;
             position: relative;
-            @include line-clamp(2);
+            
     
             &::before {
                 position: absolute;
@@ -165,7 +172,6 @@
             font-weight: 600;
             font-size: 32px;
             margin-bottom: 5px;
-            @include line-clamp(2);
         }
     
         &__size {
@@ -173,15 +179,13 @@
             font-weight: 400;
             font-size: 18px;
             margin-bottom: 5px;
-            @include line-clamp(2);
         }
     
-        &__wrapper {
+        &__advan {
             font-weight: 200;
             font-size: 15px;
             margin-bottom: 20px;
             letter-spacing: 0.03rem;
-            @include line-clamp(2);
         }
     
         &__box {
@@ -239,11 +243,11 @@
         }
     }
 
-    &__thumb {
+    &__thumb-slider {
         max-width: 670px;
         padding-top: 60px;
 
-        @include r($mobile-xxl) {
+        @include r($screen-xxl) {
             margin: 0 auto;
             max-width: 600px;
         }
@@ -271,7 +275,7 @@
             height: 400px;
             margin: 0 5px;
 
-            @include r($mobile-xxl) {
+            @include r($screen-xxl) {
                 max-width: 290px;
             }
 
@@ -301,7 +305,7 @@
                 max-width: 320px;
                 height: 170px;
 
-                @include r($mobile-xxl) {
+                @include r($screen-xxl) {
                     max-width: 300px;
                     height: 150px;
                 }
@@ -352,7 +356,7 @@
                 font-size: 15px;
             }
         
-            &__wrapper {
+            &__advan {
                 font-size: 13px;
             }
         
@@ -387,14 +391,14 @@
         .slick-btn {
             position: absolute;
             top: -90px;
-            right: 15px;
+            right: 10px;
             font-size: 14px;
             font-weight: 700;
             text-transform: uppercase;
             border-radius: 3px;
             transition: background-color 0.4s;
             color: $white;
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: $gray-200;
 
             @include r($mobile-xl) {
                 top: -180px;
@@ -411,69 +415,51 @@
             @include r($mobile-sm) {
                 top: 40px;
             }
-            
-            &__span {
-                border: 1px solid $gray;
-                background-color: $gray-200;
-                transition: background-color 0.2s, border-color 0.2s;
 
-                &::before {
-                    content: "";
-                    background-repeat: no-repeat;
-                    position: absolute;
-                    width: 15px;
-                    height: 15px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-
-                &--prev {
-                    padding-left: 17px;
-
-                    @include r($mobile-sm) {
-                        left: 0;
-                    }
-                    
-                    &::before {
-                        background-image: url(../images/content/arrow-left.svg);
-                        left: 18px;
-
-                        @include r($mobile-sm) {
-                            left: 10px;
-                        }
-                    }
-                }
-
-                &--next {
-                    padding-right: 14px;
-                    
-                    &::before {
-                        background-image: url(../images/content/arrow-right.svg);
-                        right: 10px;
-
-                        @include r($mobile-sm) {
-                            right: 5px;
-                        }
-                    }
-                }
+            &::before {
+                content: "";
+                background-repeat: no-repeat;
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                top: 50%;
+                transform: translateY(-50%);
             }
 
             &--prev {
-                right: 115px;
-                padding: 10px 15px 10px 18px;
+                right: 110px;
+                padding: 10px 20px 10px 30px;
 
                 @include r($mobile-sm) {
                     left: 15%;
-                    padding: 5px 10px;
+                    padding: 5px 10px 7px 20px;
+                }
+
+                &::before {
+                    background-image: url(../images/content/arrow-left.svg);
+                    left: 18px;
+
+                    @include r($mobile-sm) {
+                        left: 7px;
+                    }
                 }
             }
 
             &--next {
-                padding: 10px 18px 10px 15px;
+                padding: 10px 30px 10px 20px;
 
                 @include r($mobile-sm) {
                     right: 15%;
-                    padding: 5px 10px;
+                    padding: 5px 20px 7px 10px;
+                }
+
+                &::before {
+                    background-image: url(../images/content/arrow-right.svg);
+                    right: 10px;
+
+                    @include r($mobile-sm) {
+                        right: 0px;
+                    }
                 }
             }
 
@@ -486,6 +472,8 @@
                 }
             }
         }
+
+
         
     }
 }

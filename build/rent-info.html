@@ -1,0 +1,410 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent information</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/content/favicon-32x32.png">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <script src="js/main.min.js"></script>
+</body>
+</html>
+    
+    <header class="header header--black">
+    <div class="container">
+        <nav class="menu">
+            <a class="logo header__logo" href="/">
+                <img class="logo__img" src="images/content/logo.svg" alt="Logo" width="180" height="40">
+            </a>
+            <div class="menu__box">
+                <ul class="menu__nav">
+                    <li class="menu__item">
+                        <a class="menu__btn btn--blue-hover" href="#">
+                            About
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__btn btn--blue-hover" href="#">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__btn btn--blue-hover" href="#">
+                            Faqs
+                        </a>
+                    </li>
+                </ul>
+                <ul class="menu__nav">
+                    <li class="menu__item">
+                        <a class="menu__btn btn--blue-hover" href="#">
+                            Manage Booking
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__btn btn--blue-hover" href="#">
+                            Sign in
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__btn btn--blue-hover" href="#">
+                            Register
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="menu__burger btn" type="button">
+                <span class="sr-only">open the menu</span>
+                <span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <h1 class="sr-only">
+            Car order information
+        </h1>
+        <div class="overlay"></div>
+        
+        <div class="rent-info">
+            <div class="rent-info__form">
+                <div class="container">
+
+                    <form class="auto-form">
+    <div class="auto-form__wrapper auto-form__wrapper--place">
+        <div class="auto-form__box">
+            <span class="auto-form__icon"></span>
+            <label class="auto-form__label" for="place1">
+                Pickup
+            </label>
+            <select class="auto-form__select" name="[auto]select" id="place1" required>
+                <option>Munich, Germany (MUC-Franz Josef Stra…</option>
+            </select>
+        </div>
+        
+        <div class="auto-form__box">
+            <span class="auto-form__icon"></span>
+            <label class="auto-form__label" for="place2">
+                Drop-off
+            </label>
+            <select class="auto-form__select" name="[auto]select" id="place2" required>
+                <option>Cologne, Germany (CGN-Cologne - Bonn)</option>
+            </select>
+        </div>
+    </div>
+    <div class="auto-form__wrapper">
+        <div class="auto-form__box auto-form__box--date">
+            <span class="auto-form__icon auto-form__icon--date"></span>
+            <label class="auto-form__label" for="auto-date">
+                Duration
+            </label>
+            <select class="auto-form__select auto-form__select--date" name="[auto]search" type="search" id="auto-search1" required>
+                <option>1 Day</option>
+                <option>2 Days</option>
+                <option selected>3 Days</option>
+                <option>4 Days</option>
+                <option>5 Days</option>
+                <option>6 Days</option>
+                <option>7 Days</option>
+                <option>8 Days</option>
+                <option>9 Days</option>
+                <option>10 Days</option>
+            </select>
+        </div>
+        <button class="auto-form__btn btn btn--green" type="submit">
+            Refine search
+        </button>
+    </div>
+</form>
+
+                </div>
+            </div>
+            <div class="rent-info__wrapper">
+                <div class="container">
+
+                    <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Mercedes-Benz E200/220 or similar
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Sedan
+                            </a>
+                        </li>
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                PDAR
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+    
+        <div class="auto-card__advantages">
+            <span class="auto-card__advantages-item">
+                Manual transmission
+            </span>
+            <span class="auto-card__advantages-item">
+                Unlimited mileage
+            </span>
+            <span class="auto-card__advantages-item">
+                Navigation system
+            </span>
+        </div>
+    
+
+    
+
+</article>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="rent-info__content">
+                    <div class="rent-info__inner">
+                        <div class="rent-info__tabs">
+
+                            <ul class="tabs-btn">
+    <li class="tabs-btn__item">
+        <button class="tabs-btn__btn tabs-btn__btn--same btn active" type="button" onclick="openContent(event, 'included')" id="defaultOpen">
+            What’s included
+        </button>
+    </li>
+    <li class="tabs-btn__item">
+        <button class="tabs-btn__btn tabs-btn__btn--different btn" type="button" onclick="openContent(event, 'not-included')">
+            Not included in rate
+        </button>
+    </li>
+</ul>
+
+                            <ul class="rent-info__list">
+                                <li class="rent-info__item" id="included">
+                                    <div>
+                                        <p>
+                                            In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                        </p>
+                                        <p>
+                                            Pellentesque auctor eleifend rhoncus. Mauris vulputate purus id rutrum varius. Donec pellentesque sit amet lectus vel commodo. Etiam iaculis sagittis egestas.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="rent-info__item" id="not-included">
+                                    <div>
+                                        <p>
+                                            In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                        </p>
+                                        <p>
+                                            In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                        </p>
+                                        <p>
+                                            In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="rent-info__accessories">
+                            <div class="rent-info__accessories-wrapper">
+                                <span class="rent-info__accessories-title">
+                                    Accessories
+                                </span>
+                                <span class="rent-info__accessories-warning">
+                                    Requests cannot be guaranteed as they are subject to availability.Payment due at pick-up.
+                                </span>
+                            </div>
+                            <ul class="accessories">
+                                <li class="accessories__item">
+                                    <input class="accessories__check" type="checkbox" name="[accessories]checkbox" id="ski" checked required>
+                                    <div class="accessories__checkbox"><span></span></div>
+                                    <label class="accessories__label active" for="ski" id="accessories-ski" tabindex="0">
+                                        <span class="accessories__box">
+                                            <span class="accessories__stuff">Ski rack</span>
+                                            <span class="accessories__price"><span>$</span>110</span>
+                                        </span>
+                                    </label>
+                                </li>
+                                <li class="accessories__item">
+                                    <input class="accessories__check" type="checkbox" name="[accessories]checkbox" id="infant" required>
+                                    <div class="accessories__checkbox"><span></span></div>
+                                    <label class="accessories__label" for="infant" id="accessories-infant" tabindex="0">
+                                        <span class="accessories__box">
+                                            <span class="accessories__stuff">Infant seat</span>
+                                            <span class="accessories__price"><span>$</span>80</span>
+                                        </span>
+                                    </label>
+                                </li>
+                                <li class="accessories__item">
+                                    <input class="accessories__check" type="checkbox" name="[accessories]checkbox" id="toddler" required>
+                                    <div class="accessories__checkbox"><span></span></div>
+                                    <label class="accessories__label" for="toddler" id="accessories-toddler" tabindex="0">
+                                        <span class="accessories__box">
+                                            <span class="accessories__stuff">Toddler seat</span>
+                                            <span class="accessories__price"><span>$</span>80</span>
+                                        </span>
+                                    </label>
+                                </li>
+                                <li class="accessories__item">
+                                    <input class="accessories__check" type="checkbox" name="[accessories]checkbox" id="chains" required>
+                                    <div class="accessories__checkbox"><span></span></div>
+                                    <label class="accessories__label" for="chains" id="accessories-chains" tabindex="0">
+                                        <span class="accessories__box">
+                                            <span class="accessories__stuff">Snow chains</span>
+                                            <span class="accessories__price"><span>$</span>80</span>
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rent-info__box">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer class="footer">
+    <div class="footer__wrapper">
+        <a class="logo footer__logo" href="/">
+            <img src="images/content/logo.svg" alt="Logo" width="140" height="30">
+        </a>
+    </div>
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__lang">
+                    <label class="footer__label" for="select1">Site Language/Currency
+                    </label>
+                    <select class="footer__select" name="[footer]select" id="select1">
+                        <option>English</option>
+                        <option>Deutsch</option>
+                        <option>Czech</option>
+                    </select>
+                    
+                    <label class="footer__label" for="select2">
+                        <span class="sr-only">Currency</span>
+                    </label>
+                    <select class="footer__select footer__select--currency" name="[footer]select" id="select2">
+                        <option>Usd</option>
+                        <option>Eur</option>
+                        <option>Czk</option>
+                    </select>
+                </div>
+                <nav class="footer__nav-top">
+                    <div class="footer__box">
+                        <span class="footer__title title">
+                            Company
+                        </span>
+                        <ul class="footer__nav">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    About
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Contact us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__box">
+                        <span class="footer__title title">
+                            Legal
+                        </span>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Legal Information
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__box">
+                        <span class="footer__title title">
+                            Explore
+                        </span>
+                        <ul class="footer__nav">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    How it works?
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Help
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    FAQs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="footer__bottom">
+            <ul class="social">
+                <li class="social__item">
+                    <a class="social__link social__link--facebook" target="_blank" href="https://www.facebook.com/">
+                        <span class="sr-only">facebook</span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--tweeter" target="_blank" href="https://twitter.com/tweeter">
+                        <span class="sr-only">tweeter</span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--instagram" target="_blank" href="https://www.instagram.com/?hl=de">
+                        <span class="sr-only">instagram</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__copy">
+                © Fleetster Car Rent als 2018 All Rights Reserved.
+            </div>
+        </div>
+    </div>
+</footer>

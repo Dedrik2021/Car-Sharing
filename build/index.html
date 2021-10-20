@@ -14,7 +14,7 @@
 </body>
 </html>
     
-    <header class="header">
+    <header class="header @@class">
     <div class="container">
         <nav class="menu">
             <a class="logo header__logo" href="/">
@@ -69,18 +69,18 @@
         <section class="hero" style="background-image: url(images/content/hero-bg.jpg);">
             <div class="container">
                 <div class="hero__content">
-                    <h2 class="hero__title title">
+                    <h1 class="hero__title title">
                         Find your ideal car from 500<span>+</span> cars
-                    </h2>
+                    </h1>
                     
                     <ul class="tabs-btn">
     <li class="tabs-btn__item">
-        <button class="tabs-btn__btn tabs-btn__btn--same btn active" type="button">
+        <button class="tabs-btn__btn tabs-btn__btn--same btn active" type="button" onclick="openContent(event, 'included')" id="defaultOpen">
             Same as Drop-off
         </button>
     </li>
     <li class="tabs-btn__item">
-        <button class="tabs-btn__btn tabs-btn__btn--different btn" type="button">
+        <button class="tabs-btn__btn tabs-btn__btn--different btn" type="button" onclick="openContent(event, 'not-included')">
             Different Drop-off
         </button>
     </li>
@@ -88,18 +88,27 @@
 
                     <form class="hero-form">
     <div class="hero-form__box">
-        <label class="hero-form__label" for="hero-search"><span class="sr-only">Enter City, Airport, Station, Region, Distric</span></label>
-        <input class="hero-form__input" name="[hero]search" id="hero-search" type="search"  placeholder="Enter City, Airport, Station, Region, District…" required>
+        <label class="hero-form__label" for="hero-search">
+            <span class="sr-only">Enter City, Airport, Station, Region, Distric</span>
+        </label>
+        <input class="hero-form__input" name="[city]search" id="hero-search" type="search"  placeholder="Enter City, Airport, Station, Region, District…" required>
     </div>
     
     <div class="hero-form__wrapper">
-        <label class="hero-form__date-label hero-form__date-label--different" for="hero-date1">
-            <input class="hero-form__date" type="date" id="hero-date1" name="[hero]date" value="2021-07-04" required> 
-        </label>
-        <label class="hero-form__date-label" for="hero-date2">
-            <input class="hero-form__date" type="date" id="hero-date2" name="[hero]date" value="2021-09-04" required> 
-        </label>
-    
+        <div class="hero-form__wrapper-box">
+            <label class="hero-form__date-label" for="hero-date1">
+                <span class="sr-only">choice of date</span>
+            </label>
+            <input class="hero-form__date hero-form__date--different" id="hero-date1" name="[order]date" value="Sat 04/07" required> 
+        </div>
+        
+        <div class="hero-form__wrapper-box">
+            <label class="hero-form__date-label" for="hero-date2">
+                <span class="sr-only">choice of date</span>
+            </label>
+            <input class="hero-form__date hero-form__date--same" id="hero-date2" name="[order]date" value="Mon 04/09" required> 
+        </div>
+        
         <button class="hero-form__btn btn btn--yellow">Search</button>    
     </div>
 </form>
@@ -108,19 +117,19 @@
             </div>
         </section>
         
-        <section class="rent">
+        <div class="rent">
     <div class="container">
         <div class="rent__inner">
-            <h1 class="rent__title title">
+            <h2 class="rent__title title">
                 World's biggest online car rental service
-            </h1>
+            </h2>
             <div class="rent__text">
                 <p>
                     Etiam vel pellentesque velit, ut feugiat nisi. Nullam augue purus, facilisis et varius non, dignissim dapibus orci. Maecenas quis vulputate ligula, eu elementum lorem. Maecenas semper sodales ligula. Nam porta fermentum est nec blandit.
                 </p>
             </div>
             <div class="rent__box">
-                <a class="rent__btn btn btn--green" href="#">
+                <a class="rent__btn btn btn--green" href="/auto-park.html">
                     Book your car
                 </a>
                 <a class="rent__btn btn btn--green" href="#">
@@ -129,115 +138,115 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
         <section class="places">
-            <div class="container">
-                <h2 class="places__title title">
-                    Popular Places
-                </h2>
-                <ul class="places-cart">
-                    <li class="places-cart__item" tabindex="0">
-                        <h3 class="places-cart__title">
-                            London, United Kingdom
-                        </h3>
-                        <img src="images/content/places-1.jpg" alt="London, United Kingdom" width="270" height="270">
-                        <div class="places-cart__box">
-                            <a class="places-cart__link places-cart__link--book" href="#">
-                                Book your car
-                            </a>
-                            <a class="places-cart__link" href="#">
-                                <span>View offers</span>  
-                            </a>
-                        </div>
-                    </li>
-                    <li class="places-cart__item" tabindex="0">
-                        <h3 class="places-cart__title">
-                            Paris, France
-                        </h3>
-                        <img src="images/content/places-2.jpg" alt="Paris, France" width="270" height="270">
-                        <div class="places-cart__box">
-                            <a class="places-cart__link places-cart__link--book" href="#">
-                                Book your car
-                            </a>
-                            <a class="places-cart__link" href="#">
-                                <span>View offers</span> 
-                            </a>
-                        </div>
-                    </li>
-                    <li class="places-cart__item places-cart__item--big" tabindex="0">
-                        <h3 class="places-cart__title">
-                            Dubai, United Arab Emirates 
-                        </h3>
-                        <img src="images/content/places-3.jpg" alt="Dubai, United Arab Emirates" width="580" height="580">
-                        <div class="places-cart__box">
-                            <a class="places-cart__link places-cart__link--book" href="#">
-                                Book your car
-                            </a>
-                            <a class="places-cart__link" href="#">
-                                <span>View offers</span> 
-                            </a>
-                        </div>
-                    </li>
-                    <li class="places-cart__item places-cart__item--height" tabindex="0">
-                        <h3 class="places-cart__title">
-                            Amsterdam, Netherlands
-                        </h3>
-                        <img src="images/content/places-4.jpg" alt="Amsterdam, Netherlands" width="270" height="580">
-                        <div class="places-cart__box">
-                            <a class="places-cart__link places-cart__link--book" href="#">
-                                Book your car
-                            </a>
-                            <a class="places-cart__link" href="#">
-                                <span>View offers</span> 
-                            </a>
-                        </div>
-                    </li>
-                    <li class="places-cart__item" tabindex="0">
-                        <h3 class="places-cart__title">
-                            Rome, Italy
-                        </h3>
-                        <img src="images/content/places-5.jpg" alt="Rome, Italy" width="270" height="270">
-                        <div class="places-cart__box">
-                            <a class="places-cart__link places-cart__link--book" href="#">
-                                Book your car
-                            </a>
-                            <a class="places-cart__link" href="#">
-                                <span>View offers</span> 
-                            </a>
-                        </div>
-                    </li>
-                    <li class="places-cart__item places-cart__item--width" tabindex="0">
-                        <h3 class="places-cart__title">
-                            New York, NY
-                        </h3>
-                        <img src="images/content/places-6.jpg" alt="New York, NY" width="580" height="270">
-                        <div class="places-cart__box">
-                            <a class="places-cart__link places-cart__link--book" href="#">
-                                Book your car
-                            </a>
-                            <a class="places-cart__link" href="#">
-                                <span>View offers</span> 
-                            </a>
-                        </div>
-                    </li>
-                    <li class="places-cart__item" tabindex="0">
-                        <h3 class="places-cart__title">
-                            Barcelona, Spain
-                        </h3>
-                        <img src="images/content/places-7.jpg" alt="Barcelona, Spain" width="270" height="270">
-                        <div class="places-cart__box">
-                            <a class="places-cart__link places-cart__link--book" href="#">
-                                Book your car
-                            </a>
-                            <a class="places-cart__link" href="#">
-                                <span>View offers</span> 
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
+    <div class="container">
+        <h2 class="places__top-title title">
+            Popular Places
+        </h2>
+        <ul class="places__list">
+            <li class="places__item" tabindex="0">
+                <h3 class="places__title">
+                    London, United Kingdom
+                </h3>
+                <img src="images/content/places-1.jpg" alt="London, United Kingdom" width="270" height="270">
+                <div class="places__box">
+                    <a class="places__link places__link--book" href="/auto-park.html">
+                        Book your car
+                    </a>
+                    <a class="places__link" href="#">
+                        <span>View offers</span>  
+                    </a>
+                </div>
+            </li>
+            <li class="places__item" tabindex="0">
+                <h3 class="places__title">
+                    Paris, France
+                </h3>
+                <img src="images/content/places-2.jpg" alt="Paris, France" width="270" height="270">
+                <div class="places__box">
+                    <a class="places__link places__link--book" href="/auto-park.html">
+                        Book your car
+                    </a>
+                    <a class="places__link" href="#">
+                        <span>View offers</span> 
+                    </a>
+                </div>
+            </li>
+            <li class="places__item" tabindex="0">
+                <h3 class="places__title">
+                    Dubai, United Arab Emirates 
+                </h3>
+                <img src="images/content/places-3.jpg" alt="Dubai, United Arab Emirates" width="580" height="580">
+                <div class="places__box">
+                    <a class="places__link places__link--book" href="/auto-park.html">
+                        Book your car
+                    </a>
+                    <a class="places__link" href="#">
+                        <span>View offers</span> 
+                    </a>
+                </div>
+            </li>
+            <li class="places__item" tabindex="0">
+                <h3 class="places__title">
+                    Amsterdam, Netherlands
+                </h3>
+                <img src="images/content/places-4.jpg" alt="Amsterdam, Netherlands" width="270" height="580">
+                <div class="places__box">
+                    <a class="places__link places__link--book" href="/auto-park.html">
+                        Book your car
+                    </a>
+                    <a class="places__link" href="#">
+                        <span>View offers</span> 
+                    </a>
+                </div>
+            </li>
+            <li class="places__item" tabindex="0">
+                <h3 class="places__title">
+                    Rome, Italy
+                </h3>
+                <img src="images/content/places-5.jpg" alt="Rome, Italy" width="270" height="270">
+                <div class="places__box">
+                    <a class="places__link places__link--book" href="/auto-park.html">
+                        Book your car
+                    </a>
+                    <a class="places__link" href="#">
+                        <span>View offers</span> 
+                    </a>
+                </div>
+            </li>
+            <li class="places__item" tabindex="0">
+                <h3 class="places__title">
+                    New York, NY
+                </h3>
+                <img src="images/content/places-6.jpg" alt="New York, NY" width="580" height="270">
+                <div class="places__box">
+                    <a class="places__link places__link--book" href="/auto-park.html">
+                        Book your car
+                    </a>
+                    <a class="places__link" href="#">
+                        <span>View offers</span> 
+                    </a>
+                </div>
+            </li>
+            <li class="places__item" tabindex="0">
+                <h3 class="places__title">
+                    Barcelona, Spain
+                </h3>
+                <img src="images/content/places-7.jpg" alt="Barcelona, Spain" width="270" height="270">
+                <div class="places__box">
+                    <a class="places__link places__link--book" href="/auto-park.html">
+                        Book your car
+                    </a>
+                    <a class="places__link" href="#">
+                        <span>View offers</span> 
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>        
+</section>
         
         <section class="top-picks">
     <div class="container">
@@ -245,7 +254,7 @@
             Top picks from your city
         </h2>
         <div class="top-picks__slider">
-            <ul class="top-picks__big">
+            <ul class="top-picks__big-slider">
                 <li class="top-picks__item">
                     <article class="top-cart">
                         <div class="top-cart__img-wrapper">
@@ -259,12 +268,13 @@
                                 Chevrolet Tahoe
                             </h3>
                             <span class="top-cart__size">Full-size SUV</span>
-                            <div class="top-cart__wrapper">
-                                <span>Automatic transmission,</span>
-                                <span> Air-conditioning</span>
+                            <div class="top-cart__advan">
+                                <p>
+                                    Automatic transmission,Air-conditioning
+                                </p>
                             </div>
                             <div class="top-cart__box">
-                                <a class="top-cart__btn btn btn--blue btn--yellow" href="#">Book your car</a>
+                                <a class="top-cart__btn btn btn--blue btn--yellow" href="/auto-park.html">Book your car</a>
                                 <div class="top-cart__wrapper-box">
                                     <span class="top-cart__icon top-cart__icon--door">5</span>
                                     <span class="top-cart__icon top-cart__icon--man">7</span>
@@ -286,12 +296,13 @@
                                 Hyundai Accent
                             </h3>
                             <span class="top-cart__size">Intermediate</span>
-                            <div class="top-cart__wrapper">
-                                <span>Automatic transmission, </span>
-                                <span>Unlimited mileage</span>
+                            <div class="top-cart__advan">
+                                <p>
+                                    Automatic transmission,Unlimited mileage
+                                </p>
                             </div>
                             <div class="top-cart__box">
-                                <a class="top-cart__btn btn btn--blue btn--yellow" href="#">Book your car</a>
+                                <a class="top-cart__btn btn btn--blue btn--yellow" href="/auto-park.html">Book your car</a>
                                 <div class="top-cart__wrapper-box">
                                     <span class="top-cart__icon top-cart__icon--door">4</span>
                                     <span class="top-cart__icon top-cart__icon--man">5</span>
@@ -313,12 +324,13 @@
                                 Kia Sportage
                             </h3>
                             <span class="top-cart__size">Intermediate</span>
-                            <div class="top-cart__wrapper">
-                                <span>Automatic transmission,</span>
-                                <span> Air-conditioning</span>
+                            <div class="top-cart__advan">
+                                <p>
+                                    Automatic transmission,Air-conditioning
+                                </p>
                             </div>
                             <div class="top-cart__box">
-                                <a class="top-cart__btn btn btn--blue btn--yellow" href="#">Book your car</a>
+                                <a class="top-cart__btn btn btn--blue btn--yellow" href="/auto-park.html">Book your car</a>
                                 <div class="top-cart__wrapper-box">
                                     <span class="top-cart__icon top-cart__icon--door">4</span>
                                     <span class="top-cart__icon top-cart__icon--man">5</span>
@@ -328,7 +340,7 @@
                     </article>
                 </li>
             </ul>  
-            <ul class="top-picks__thumb">
+            <ul class="top-picks__thumb-slider">
                 <li class="top-picks__item">
                     <article class="top-cart">
                         <div class="top-cart__img-wrapper">
@@ -342,12 +354,13 @@
                                 Hyundai Accent
                             </h3>
                             <span class="top-cart__size">Intermediate</span>
-                            <div class="top-cart__wrapper">
-                                <span>Automatic transmission,</span>
-                                <span>Unlimited mileage</span>
+                            <div class="top-cart__advan">
+                                <p>
+                                    Automatic transmission,Unlimited mileage
+                                </p>
                             </div>
                             <div class="top-cart__box">
-                                <a class="top-cart__btn btn btn--blue btn--yellow" href="#">Book your car</a>
+                                <a class="top-cart__btn btn btn--blue btn--yellow" href="/auto-park.html">Book your car</a>
                                 <div class="top-cart__wrapper-box">
                                     <span class="top-cart__icon top-cart__icon--door">4</span>
                                     <span class="top-cart__icon top-cart__icon--man">5</span>
@@ -369,12 +382,13 @@
                                 Kia Sportage
                             </h3>
                             <span class="top-cart__size">Intermediate</span>
-                            <div class="top-cart__wrapper">
-                                <span>Automatic transmission,</span>
-                                <span> Air-conditioning</span>
+                            <div class="top-cart__advan">
+                                <p>
+                                    Automatic transmission,Air-conditioning
+                                </p>
                             </div>
                             <div class="top-cart__box">
-                                <a class="top-cart__btn btn btn--blue btn--yellow" href="#">Book your car</a>
+                                <a class="top-cart__btn btn btn--blue btn--yellow" href="/auto-park.html">Book your car</a>
                                 <div class="top-cart__wrapper-box">
                                     <span class="top-cart__icon top-cart__icon--door">4</span>
                                     <span class="top-cart__icon top-cart__icon--man">5</span>
@@ -396,12 +410,13 @@
                                 Chevrolet Tahoe
                             </h3>
                             <span class="top-cart__size">Full-size SUV</span>
-                            <div class="top-cart__wrapper">
-                                <span>Automatic transmission,</span>
-                                <span> Air-conditioning</span>
+                            <div class="top-cart__advan">
+                                <p>
+                                    Automatic transmission,Air-conditioning
+                                </p>
                             </div>
                             <div class="top-cart__box">
-                                <a class="top-cart__btn btn--blue btn--yellow" href="#">Book your car</a>
+                                <a class="top-cart__btn btn--blue btn--yellow" href="/auto-park.html">Book your car</a>
                                 <div class="top-cart__wrapper-box">
                                     <span class="top-cart__icon top-cart__icon--door">5</span>
                                     <span class="top-cart__icon top-cart__icon--man">7</span>
@@ -437,14 +452,14 @@
                 </div>
                 <h3 class="plans__partners-title">Our Partners</h3>
                 <ul class="plans__list">
-                    <li class="plans__item">
-                        <img src="images/content/disney-icon.png" alt="disney" width="90" height="40">
+                    <li class="plans__item plans__item--disney">
+                        <span class="sr-only">Disney</span>
                     </li>
-                    <li class="plans__item">
-                        <img src="images/content/feedex-icon.png" alt="feedex" width="90" height="35">
+                    <li class="plans__item plans__item--feedex">
+                        <span class="sr-only">Feedex</span>
                     </li>
-                    <li class="plans__item">
-                        <img src="images/content/coca-icon.png" alt="coca cola" width="90" height="40">
+                    <li class="plans__item plans__item--coca">
+                        <span class="sr-only">Coca Cola</span>
                     </li>
                 </ul>
             </div>
@@ -466,12 +481,12 @@
                     </p>
                 </div>
                 <div class="newsletter__wrapper">
-                    <a class="newsletter__link" target="_blank" href="https://www.apple.com/app-store/">
-                        <img src="images/content/app-store-img.jpg" alt="app store" width="135" height="38">
+                    <a class="newsletter__link newsletter__link--appstore" target="_blank" href="https://www.apple.com/app-store/">
+                        <span class="sr-only">app store</span>
                     </a>
                     
-                    <a class="newsletter__link" target="_blank" href="https://play.google.com/store">
-                        <img src="images/content/google-play-img.jpg" alt="google play" width="135" height="38">
+                    <a class="newsletter__link newsletter__link--google" target="_blank" href="https://play.google.com/store">
+                        <span class="sr-only">google play</span>
                     </a>
                 </div>
             </div>
@@ -500,12 +515,10 @@
     </main>
 
     <footer class="footer">
-    <div class="container">
-        <div class="footer__wrapper">
-            <a class="logo footer__logo" href="/">
-                <img src="images/content/logo.svg" alt="Logo" width="140" height="30">
-            </a>
-        </div>
+    <div class="footer__wrapper">
+        <a class="logo footer__logo" href="/">
+            <img src="images/content/logo.svg" alt="Logo" width="140" height="30">
+        </a>
     </div>
     <div class="footer__top">
         <div class="container">
@@ -530,9 +543,9 @@
                 </div>
                 <nav class="footer__nav-top">
                     <div class="footer__box">
-                        <h3 class="footer__title title">
+                        <span class="footer__title title">
                             Company
-                        </h3>
+                        </span>
                         <ul class="footer__nav">
                             <li class="footer__item">
                                 <a class="footer__link" href="#">
@@ -552,9 +565,9 @@
                         </ul>
                     </div>
                     <div class="footer__box">
-                        <h3 class="footer__title title">
+                        <span class="footer__title title">
                             Legal
-                        </h3>
+                        </span>
                         <ul class="footer__list">
                             <li class="footer__item">
                                 <a class="footer__link" href="#">
@@ -574,9 +587,9 @@
                         </ul>
                     </div>
                     <div class="footer__box">
-                        <h3 class="footer__title title">
+                        <span class="footer__title title">
                             Explore
-                        </h3>
+                        </span>
                         <ul class="footer__nav">
                             <li class="footer__item">
                                 <a class="footer__link" href="#">

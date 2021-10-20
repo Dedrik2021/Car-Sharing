@@ -1,0 +1,224 @@
+    @@include('./parts/components/_top.html', {
+        "title": "Our vehicle fleet"
+    })
+    
+    @@include('./parts/components/_header.html', {
+        "class": "header--black",
+    })
+
+    <main>
+        <h1 class="sr-only">
+            choice of car
+        </h1>
+        <div class="overlay"></div>
+
+        <div class="auto-park">
+            <div class="auto-park__form">
+                <div class="container">
+
+                    @@include('./parts/components/_auto-form.html')
+                    
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="auto-park__inner">
+                    <button class="auto-park__filters-btn btn" type="button">
+                        <svg width="30" height="27">
+                            <use xlink:href="images/sprite.svg#filter-icon"></use>
+                        </svg>
+                        <span>Filter</span>
+                    </button>
+                    
+                    @@include('./parts/auto-park/_auto-park__filters.html')
+
+                    <div class="auto-park__cars">
+                        <div class="auto-park__cars-box">
+                            <span class="auto-park__cars-title title">
+                                We found<span> 179 </span>Cars at Munich airport
+                            </span>
+                            <div class="auto-park__cars-wrapper">
+                                <label class="auto-park__cars-label" for="select-price">Sort by</label>
+                                <select class="auto-park__price" name="[price]select" id="select-price" >
+                                    <option value="Price:">Price: High to Low</option>
+                                    <option>Price: Low to Hight</option>
+                                </select>
+                            </div>
+                        </div>
+                        <ul class="top-cars">
+                            <li class="top-cars__item">
+
+                                @@include('./parts/auto-park/_auto-card.html', {
+                                    "autoCard": true,
+                                    "autoCardAdvantages": false,
+                                    "autoCardExpanded": true,
+                                    "image-url": "images/content/auto-card-1.jpg",
+                                    "alt": "Mercedes-Benz E200/220",
+                                    "title": "Mercedes-Benz E200/220 or similar",
+                                    arr: [{title: 'Sedan'}, {title: 'PDAR'}],
+                                    
+                                })
+                                
+                            </li>
+                            <li class="top-cars__item">
+
+                                @@include('./parts/auto-park/_auto-card.html', {
+                                    "autoCard": true,
+                                    "autoCardAdvantages": false,
+                                    "autoCardExpanded": true,
+                                    "image-url": "images/content/auto-card-2.jpg",
+                                    "alt": "Volkswagen Passat Estate",
+                                    "title": "Volkswagen Passat Estate",
+                                    arr: [{title: 'Estate'}],
+                                    
+                                })
+
+                            </li>
+                            <li class="top-cars__item">
+
+                                @@include('./parts/auto-park/_auto-card.html', {
+                                    "autoCard": true,
+                                    "autoCardAdvantages": false,
+                                    "autoCardExpanded": true,
+                                    "image-url": "images/content/auto-card-3.jpg",
+                                    "alt": "Intermediate, 4-5 Door, Manual, Aircon (Group E)",
+                                    "title": "Intermediate, 4-5 Door, Manual, Aircon (Group E)",
+                                    arr: [{title: 'Sedan'}, {title: 'PDAR'}],
+                                    
+                                })
+                
+                            </li>
+                            <li class="top-cars__item">
+
+                                @@include('./parts/auto-park/_auto-card.html', {
+                                    "autoCard": true,
+                                    "autoCardAdvantages": false,
+                                    "autoCardExpanded": true,
+                                    "image-url": "images/content/auto-card-1.jpg",
+                                    "alt": "Mercedes-Benz E200/220",
+                                    "title": "Mercedes-Benz E200/220 or similar",
+                                    arr: [{title: 'Sedan'}, {title: 'PDAR'}],
+                                    
+                                })
+                                
+                            </li>
+                            <li class="top-cars__item">
+
+                                @@include('./parts/auto-park/_auto-card.html', {
+                                    "autoCard": true,
+                                    "autoCardAdvantages": false,
+                                    "autoCardExpanded": true,
+                                    "image-url": "images/content/auto-card-2.jpg",
+                                    "alt": "Volkswagen Passat Estate",
+                                    "title": "Volkswagen Passat Estate",
+                                    arr: [{title: 'Estate'}],
+                                    
+                                })
+
+                            </li>
+                            <li class="top-cars__item">
+
+                                @@include('./parts/auto-park/_auto-card.html', {
+                                    "autoCard": true,
+                                    "autoCardAdvantages": false,
+                                    "autoCardExpanded": true,
+                                    "image-url": "images/content/auto-card-3.jpg",
+                                    "alt": "Intermediate, 4-5 Door, Manual, Aircon (Group E)",
+                                    "title": "Intermediate, 4-5 Door, Manual, Aircon (Group E)",
+                                    arr: [{title: 'Sedan'}, {title: 'PDAR'}],
+                                
+                                })
+                
+                            </li>
+                            <li class="top-cars__item">
+
+                                @@include('./parts/auto-park/_auto-card.html', {
+                                    "autoCard": true,
+                                    "autoCardAdvantages": false,
+                                    "autoCardExpanded": true,
+                                    "image-url": "images/content/auto-card-1.jpg",
+                                    "alt": "Mercedes-Benz E200/220",
+                                    "title": "Mercedes-Benz E200/220 or similar",
+                                    arr: [{title: 'Sedan'}, {title: 'PDAR'}],
+                                    
+                                })
+                                
+                            </li>
+                            <li class="top-cars__item">
+
+                                @@include('./parts/auto-park/_auto-card.html', {
+                                    "autoCard": true,
+                                    "autoCardAdvantages": false,
+                                    "autoCardExpanded": true,
+                                    "image-url": "images/content/auto-card-2.jpg",
+                                    "alt": "Volkswagen Passat Estate",
+                                    "title": "Volkswagen Passat Estate",
+                                    arr: [{title: 'Estate'}],
+                                    
+                                })
+
+                            </li>
+                            <li class="top-cars__item">
+
+                                @@include('./parts/auto-park/_auto-card.html', {
+                                    "autoCard": true,
+                                    "autoCardAdvantages": false,
+                                    "autoCardExpanded": true,
+                                    "image-url": "images/content/auto-card-3.jpg",
+                                    "alt": "Intermediate, 4-5 Door, Manual, Aircon (Group E)",
+                                    "title": "Intermediate, 4-5 Door, Manual, Aircon (Group E)",
+                                    arr: [{title: 'Sedan'}, {title: 'PDAR'}],
+                                    
+                                })
+                
+                            </li>
+                            <li class="top-cars__item">
+
+                                @@include('./parts/auto-park/_auto-card.html', {
+                                    "autoCard": true,
+                                    "autoCardAdvantages": false,
+                                    "autoCardExpanded": true,
+                                    "image-url": "images/content/auto-card-1.jpg",
+                                    "alt": "Mercedes-Benz E200/220",
+                                    "title": "Mercedes-Benz E200/220 or similar",
+                                    arr: [{title: 'Sedan'}, {title: 'PDAR'}],
+                                
+                                })
+                                
+                            </li>
+                            <li class="top-cars__item">
+
+                                @@include('./parts/auto-park/_auto-card.html', {
+                                    "autoCard": true,
+                                    "autoCardAdvantages": false,
+                                    "autoCardExpanded": true,
+                                    "image-url": "images/content/auto-card-2.jpg",
+                                    "alt": "Volkswagen Passat Estate",
+                                    "title": "Volkswagen Passat Estate",
+                                    arr: [{title: 'Estate'}],
+                                    
+                                })
+
+                            </li>
+                            <li class="top-cars__item">
+
+                                @@include('./parts/auto-park/_auto-card.html', {
+                                    "autoCard": true,
+                                    "autoCardAdvantages": false,
+                                    "autoCardExpanded": true,
+                                    "image-url": "images/content/auto-card-3.jpg",
+                                    "alt": "Intermediate, 4-5 Door, Manual, Aircon (Group E)",
+                                    "title": "Intermediate, 4-5 Door, Manual, Aircon (Group E)",
+                                    arr: [{title: 'Sedan'}, {title: 'PDAR'}],
+                                    
+                                })
+                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    @@include('./parts/components/_footer.html')

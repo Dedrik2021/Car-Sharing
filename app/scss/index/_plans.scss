@@ -89,7 +89,7 @@
         justify-content: space-between;
         margin-bottom: 65px;
 
-        @include r($mobile-xxl) {
+        @include r($screen-xxl) {
             justify-content: flex-start;
         }
 
@@ -112,7 +112,7 @@
         display: inline-block;
         transition: background-color 0.4s, color 0.4s;
 
-        @include r($mobile-xxl) {
+        @include r($screen-xxl) {
             padding: 18px 35px 17px;
         }
 
@@ -129,7 +129,7 @@
 
     &__partners-title {
         font-size: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         @include line-clamp(2);
     }
 
@@ -139,9 +139,25 @@
     }
 
     &__item {
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 90px;
+        height: 50px;
         
         &:not(:last-child) {
             margin-right: 20px;
+        }
+
+        &--disney {
+            background-image: url(../images/content/disney-icon.png);
+        }
+
+        &--feedex {
+            background-image: url(../images/content/feedex-icon.png);
+        }
+
+        &--coca {
+            background-image: url(../images/content/coca-icon.png);
         }
     }
 }

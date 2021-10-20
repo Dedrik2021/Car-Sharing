@@ -1,0 +1,137 @@
+    @@include('./parts/components/_top.html', {
+        "title": "Rent information"
+    })
+    
+    @@include('./parts/components/_header.html', {
+        "class": "header--black",
+    })
+
+    <main>
+        <h1 class="sr-only">
+            Car order information
+        </h1>
+        <div class="overlay"></div>
+        
+        <div class="rent-info">
+            <div class="rent-info__form">
+                <div class="container">
+
+                    @@include('./parts/components/_auto-form.html')
+
+                </div>
+            </div>
+            <div class="rent-info__wrapper">
+                <div class="container">
+
+                    @@include('./parts/auto-park/_auto-card.html', {
+                        "autoCard": true,
+                        "autoCardAdvantages": true,
+                        "autoCardExpanded": false,
+                        "image-url": "images/content/auto-card-1.jpg",
+                        "alt": "Mercedes-Benz E200/220",
+                        "title": "Mercedes-Benz E200/220 or similar",
+                        arr: [{title: 'Sedan'}, {title: 'PDAR'}],
+                    })
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="rent-info__content">
+                    <div class="rent-info__inner">
+                        <div class="rent-info__tabs">
+
+                            @@include('./parts/components/_tabs-btn.html', {
+                                "btn1": "What’s included",
+                                "btn2": "Not included in rate",
+
+                            })
+
+                            <ul class="rent-info__list">
+                                <li class="rent-info__item" id="included">
+                                    <div>
+                                        <p>
+                                            In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                        </p>
+                                        <p>
+                                            Pellentesque auctor eleifend rhoncus. Mauris vulputate purus id rutrum varius. Donec pellentesque sit amet lectus vel commodo. Etiam iaculis sagittis egestas.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="rent-info__item" id="not-included">
+                                    <div>
+                                        <p>
+                                            In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                        </p>
+                                        <p>
+                                            In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                        </p>
+                                        <p>
+                                            In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="rent-info__accessories">
+                            <div class="rent-info__accessories-wrapper">
+                                <span class="rent-info__accessories-title">
+                                    Accessories
+                                </span>
+                                <span class="rent-info__accessories-warning">
+                                    Requests cannot be guaranteed as they are subject to availability.Payment due at pick-up.
+                                </span>
+                            </div>
+                            <ul class="accessories">
+                                <li class="accessories__item">
+                                    <input class="accessories__check" type="checkbox" name="[accessories]checkbox" id="ski" checked required>
+                                    <div class="accessories__checkbox"><span></span></div>
+                                    <label class="accessories__label active" for="ski" id="accessories-ski" tabindex="0">
+                                        <span class="accessories__box">
+                                            <span class="accessories__stuff">Ski rack</span>
+                                            <span class="accessories__price"><span>$</span>110</span>
+                                        </span>
+                                    </label>
+                                </li>
+                                <li class="accessories__item">
+                                    <input class="accessories__check" type="checkbox" name="[accessories]checkbox" id="infant" required>
+                                    <div class="accessories__checkbox"><span></span></div>
+                                    <label class="accessories__label" for="infant" id="accessories-infant" tabindex="0">
+                                        <span class="accessories__box">
+                                            <span class="accessories__stuff">Infant seat</span>
+                                            <span class="accessories__price"><span>$</span>80</span>
+                                        </span>
+                                    </label>
+                                </li>
+                                <li class="accessories__item">
+                                    <input class="accessories__check" type="checkbox" name="[accessories]checkbox" id="toddler" required>
+                                    <div class="accessories__checkbox"><span></span></div>
+                                    <label class="accessories__label" for="toddler" id="accessories-toddler" tabindex="0">
+                                        <span class="accessories__box">
+                                            <span class="accessories__stuff">Toddler seat</span>
+                                            <span class="accessories__price"><span>$</span>80</span>
+                                        </span>
+                                    </label>
+                                </li>
+                                <li class="accessories__item">
+                                    <input class="accessories__check" type="checkbox" name="[accessories]checkbox" id="chains" required>
+                                    <div class="accessories__checkbox"><span></span></div>
+                                    <label class="accessories__label" for="chains" id="accessories-chains" tabindex="0">
+                                        <span class="accessories__box">
+                                            <span class="accessories__stuff">Snow chains</span>
+                                            <span class="accessories__price"><span>$</span>80</span>
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rent-info__box">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    @@include('./parts/components/_footer.html')

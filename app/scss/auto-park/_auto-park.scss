@@ -1,0 +1,214 @@
+.auto-park {
+
+    &__form {
+        background-color: $white-400;
+        box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    &__inner {
+        display: flex;
+        padding: 90px 0 135px;
+        position: relative;
+
+        @include r($screen-xxl) {
+            justify-content: center;
+        }
+
+        @include r($mobile-lg) {
+            flex-direction: column;
+            padding: 50px 0 90px;
+        }
+    }
+
+    &__btn-close,
+    &__filters-btn {
+        display: none;
+
+        @include r($mobile-lg) {
+            display: block;
+        }
+    }
+
+    &__filters-btn {
+
+        @include r($mobile-lg) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            margin-bottom: 20px;
+            max-width: 75px;
+        }
+
+        span {
+            padding-top: 5px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+
+    
+
+    &__cars {
+        margin-left: auto;
+
+        @include r($screen-xxl) {
+            margin-left: 0;
+        }
+    }
+
+    &__cars-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+
+        @include r($mobile-sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__cars-title {
+        max-width: 65%;
+        font-weight: 300;
+        font-size: 24px;
+        letter-spacing: 0.03rem;
+
+        @include r($mobile-md) {
+            margin-right: 15px;
+        }
+
+        @include r($mobile-sm) {
+            margin-right: 0;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &__cars-wrapper {
+        display: flex;
+        align-items: center;
+        max-width: 255px;
+        width: 100%;
+    }
+
+    &__cars-label {
+        font-size: 13px;
+        margin-right: 10px;
+        @include line-clamp(2);
+    }
+
+    &__price {
+        max-width: 195px;
+        width: 100%;
+
+        .jq-selectbox {
+
+            &__select {
+                height: 35px;
+                padding: 0 40px 0 12px;
+                border-radius: 3px;
+                font-size: 13px;
+                font-weight: 300;
+                color: $black-100;
+                background: transparent;
+                background-color: $white;
+                box-shadow: none;
+
+                &:hover {
+                    background: transparent;
+                    background-color: $white;
+                }
+            }
+
+            &__select-text {
+                padding-top: 2px;
+            }
+
+            &__dropdown {
+                width: 100%;
+                margin: 2px 0 0;
+                padding: 0;
+                border: none;
+                border-radius: 2px;
+                background: transparent;
+                background-color: $white;
+                box-shadow: none;
+                bottom: -72px !important;
+
+                .selected.sel {
+                    background-color: $yellow;
+
+                    &:hover {
+                        background-color: $green;
+                    }
+                }
+
+                ul {
+                    border-radius: 3px;
+                    background-color: $white-100;
+                    border: 1px solid $blue;
+                }
+
+                li {
+                    border-radius: 3px;
+                    padding: 8px 10px 8px 15px;
+                    transition: background-color 0.4s, color 0.4s;
+
+                    &:hover {
+                        background-color: $green;
+                    }
+                }
+            }
+
+            &__trigger {
+                border-left: none;
+            }
+
+            &__trigger-arrow {
+                position: absolute;
+                top: 15px;
+                right: 10px;
+                width: 15px;
+                height: 6px;
+                border: none;
+                background-image: url(../images/content/angle-down.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}
+
+.top-cars {
+
+    &__item {
+        border-radius: 5px;
+        border: 1px solid $gray-300;
+        transition: border-bottom-color 0.4s, border-right-color 0.4s, box-shadow 0.4s;
+
+        @include r($mobile-md) {
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        &:hover {
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 23px;
+
+            @include r($mobile-md) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

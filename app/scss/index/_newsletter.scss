@@ -38,7 +38,7 @@
             }
         }
 
-        @include r($mobile-xxl) {
+        @include r($screen-xxl) {
             padding: 90px 30px;
         }
 
@@ -46,7 +46,7 @@
             padding: 60px 15px;
         }
 
-        @include r($mobile-xl) {
+        @include r($mobile-lg) {
             padding: 40px 10px;
         }
 
@@ -96,6 +96,18 @@
         border: 2px solid $gray;
         border-radius: 3px;
         transition: box-shadow 0.4s;
+        width: 135px; 
+        height: 38px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &--appstore {
+            background-image: url(../images/content/app-store-img.jpg);
+        }
+
+        &--google {
+            background-image: url(../images/content/google-play-img.jpg);
+        }
 
         &:not(:last-child) {
             margin-right: 15px;
@@ -114,6 +126,10 @@
                 object-fit: contain;
                 height: 50%;
             }
+        }
+
+        &:focus {
+            outline-color: $yellow
         }
     }
 
@@ -189,3 +205,4 @@
         }
     }
 }
+

@@ -1,0 +1,1383 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our vehicle fleet</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/content/favicon-32x32.png">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <script src="js/main.min.js"></script>
+</body>
+</html>
+    
+    <header class="header header--black">
+    <div class="container">
+        <nav class="menu">
+            <a class="logo header__logo" href="/">
+                <img class="logo__img" src="images/content/logo.svg" alt="Logo" width="180" height="40">
+            </a>
+            <div class="menu__box">
+                <ul class="menu__nav">
+                    <li class="menu__item">
+                        <a class="menu__btn btn--blue-hover" href="#">
+                            About
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__btn btn--blue-hover" href="#">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__btn btn--blue-hover" href="#">
+                            Faqs
+                        </a>
+                    </li>
+                </ul>
+                <ul class="menu__nav">
+                    <li class="menu__item">
+                        <a class="menu__btn btn--blue-hover" href="#">
+                            Manage Booking
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__btn btn--blue-hover" href="#">
+                            Sign in
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__btn btn--blue-hover" href="#">
+                            Register
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="menu__burger btn" type="button">
+                <span class="sr-only">open the menu</span>
+                <span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <h1 class="sr-only">
+            choice of car
+        </h1>
+        <div class="overlay"></div>
+
+        <div class="auto-park">
+            <div class="auto-park__form">
+                <div class="container">
+
+                    <form class="auto-form">
+    <div class="auto-form__wrapper auto-form__wrapper--place">
+        <div class="auto-form__box">
+            <span class="auto-form__icon"></span>
+            <label class="auto-form__label" for="place1">
+                Pickup
+            </label>
+            <select class="auto-form__select" name="[auto]select" id="place1" required>
+                <option>Munich, Germany (MUC-Franz Josef Stra…</option>
+            </select>
+        </div>
+        
+        <div class="auto-form__box">
+            <span class="auto-form__icon"></span>
+            <label class="auto-form__label" for="place2">
+                Drop-off
+            </label>
+            <select class="auto-form__select" name="[auto]select" id="place2" required>
+                <option>Cologne, Germany (CGN-Cologne - Bonn)</option>
+            </select>
+        </div>
+    </div>
+    <div class="auto-form__wrapper">
+        <div class="auto-form__box auto-form__box--date">
+            <span class="auto-form__icon auto-form__icon--date"></span>
+            <label class="auto-form__label" for="auto-date">
+                Duration
+            </label>
+            <select class="auto-form__select auto-form__select--date" name="[auto]search" type="search" id="auto-search1" required>
+                <option>1 Day</option>
+                <option>2 Days</option>
+                <option selected>3 Days</option>
+                <option>4 Days</option>
+                <option>5 Days</option>
+                <option>6 Days</option>
+                <option>7 Days</option>
+                <option>8 Days</option>
+                <option>9 Days</option>
+                <option>10 Days</option>
+            </select>
+        </div>
+        <button class="auto-form__btn btn btn--green" type="submit">
+            Refine search
+        </button>
+    </div>
+</form>
+                    
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="auto-park__inner">
+                    <button class="auto-park__filters-btn btn" type="button">
+                        <svg width="30" height="27">
+                            <use xlink:href="images/sprite.svg#filter-icon"></use>
+                        </svg>
+                        <span>Filter</span>
+                    </button>
+                    
+                    <div class="auto-park__filters">
+    <button class="auto-park__btn-close btn--close">
+        <span class="sr-only">close filters</span>
+        <span></span>
+    </button>
+    <span class="auto-park__filters-title">
+        Filters<span>2</span>
+    </span>
+    <div class="auto-park__filters-box auto-park__filters-box--type active">
+        <button class="auto-park__btn btn btn--type active" type="button" id="auto">
+            Vehicle type <span class="auto-park__arrow"></span>
+        </button>
+
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label active" for="economy">Economy</label>
+            <input class="auto-park__type" type="checkbox" name="[type]check" id="economy" checked>
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="compact">Compact</label>
+            <input class="auto-park__type" type="checkbox" name="[type]check" id="compact">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="midsize">Midsize</label>
+            <input class="auto-park__type" type="checkbox" name="[type]check" id="midsize">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="standard">Standard</label>
+            <input class="auto-park__type" type="checkbox" name="[type]check" id="standard">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="fullsize">Fullsize</label>
+            <input class="auto-park__type" type="checkbox" name="[type]check" id="fullsize">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="premium">Premium</label>
+            <input class="auto-park__type" type="checkbox" name="[type]check" id="premium">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>   
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="luxury">Luxury</label>
+            <input class="auto-park__type" type="checkbox" name="[type]check" id="luxury">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="convertible">Convertible</label>
+            <input class="auto-park__type" type="checkbox" name="[type]check" id="convertible">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="minivan">Minivan</label>
+            <input class="auto-park__type" type="checkbox" name="[type]check" id="minivan">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="sport-utility">Sport Utility</label>
+            <input class="auto-park__type" type="checkbox" name="[type]check" id="sport-utility">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="sports">Sports car</label>
+            <input class="auto-park__type" type="checkbox" name="[type]check" id="sports">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+    </div>
+    <div class="auto-park__filters-box auto-park__filters-box--range active">
+        <button class="auto-park__btn btn btn--range active" type="button">
+            Price Range <span></span>
+        </button>
+
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="fifty">
+                <span>$</span>50<span>-</span>100
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[price]check" id="fifty">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="one">
+                <span>$</span>100<span>-</span>200
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[price]check" id="one">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label active" for="two">
+                <span>$</span>200<span>-</span>500
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[price]check" id="two" checked>
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="five">
+                <span>$</span>500<span>-</span>1000<span>+</span>
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[price]check" id="five">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+    </div>
+    <div class="auto-park__filters-box auto-park__filters-box--size">
+        <button class="auto-park__btn btn btn--size" type="button">
+            Party Size<span></span>
+        </button>
+
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="full">
+                Full-size SUV
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[party-size]check" id="full">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="intermed">
+                intermediate
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[party-size]check" id="intermed">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+    </div>
+    <div class="auto-park__filters-box auto-park__filters-box--specific">
+        <button class="auto-park__btn btn btn--specific" type="button">
+            Specifications  <span></span>
+        </button>
+
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="automatic">
+                Automatic transmission
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[specification]check" id="automatic">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="air">
+                Air-conditioning
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[specification]check" id="air">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="mileage">
+                Unlimited mileage
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[specification]check" id="mileage">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="hatch">
+                Hatchback
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[specification]check" id="hatch">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="sedan">
+                Sedan
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[specification]check" id="sedan">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="combi">
+                Combi
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[specification]check" id="combi">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+
+        <div class="auto-park__wrapper">
+            <label class="auto-park__label" for="limousine">
+                Limousine
+            </label>
+            <input class="auto-park__type" type="checkbox" name="[specification]check" id="limousine">
+            <div class="auto-park__checkbox">
+                <span></span>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+                    <div class="auto-park__cars">
+                        <div class="auto-park__cars-box">
+                            <span class="auto-park__cars-title title">
+                                We found<span> 179 </span>Cars at Munich airport
+                            </span>
+                            <div class="auto-park__cars-wrapper">
+                                <label class="auto-park__cars-label" for="select-price">Sort by</label>
+                                <select class="auto-park__price" name="[price]select" id="select-price" >
+                                    <option value="Price:">Price: High to Low</option>
+                                    <option>Price: Low to Hight</option>
+                                </select>
+                            </div>
+                        </div>
+                        <ul class="top-cars">
+                            <li class="top-cars__item">
+
+                                <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Mercedes-Benz E200/220 or similar
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Sedan
+                            </a>
+                        </li>
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                PDAR
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+
+    
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    
+
+</article>
+                                
+                            </li>
+                            <li class="top-cars__item">
+
+                                <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-2.jpg" alt="Volkswagen Passat Estate" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Volkswagen Passat Estate
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Estate
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+
+    
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    
+
+</article>
+
+                            </li>
+                            <li class="top-cars__item">
+
+                                <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-3.jpg" alt="Intermediate, 4-5 Door, Manual, Aircon (Group E)" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Intermediate, 4-5 Door, Manual, Aircon (Group E)
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Sedan
+                            </a>
+                        </li>
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                PDAR
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+
+    
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    
+
+</article>
+                
+                            </li>
+                            <li class="top-cars__item">
+
+                                <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Mercedes-Benz E200/220 or similar
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Sedan
+                            </a>
+                        </li>
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                PDAR
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+
+    
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    
+
+</article>
+                                
+                            </li>
+                            <li class="top-cars__item">
+
+                                <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-2.jpg" alt="Volkswagen Passat Estate" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Volkswagen Passat Estate
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Estate
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+
+    
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    
+
+</article>
+
+                            </li>
+                            <li class="top-cars__item">
+
+                                <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-3.jpg" alt="Intermediate, 4-5 Door, Manual, Aircon (Group E)" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Intermediate, 4-5 Door, Manual, Aircon (Group E)
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Sedan
+                            </a>
+                        </li>
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                PDAR
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+
+    
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    
+
+</article>
+                
+                            </li>
+                            <li class="top-cars__item">
+
+                                <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Mercedes-Benz E200/220 or similar
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Sedan
+                            </a>
+                        </li>
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                PDAR
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+
+    
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    
+
+</article>
+                                
+                            </li>
+                            <li class="top-cars__item">
+
+                                <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-2.jpg" alt="Volkswagen Passat Estate" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Volkswagen Passat Estate
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Estate
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+
+    
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    
+
+</article>
+
+                            </li>
+                            <li class="top-cars__item">
+
+                                <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-3.jpg" alt="Intermediate, 4-5 Door, Manual, Aircon (Group E)" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Intermediate, 4-5 Door, Manual, Aircon (Group E)
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Sedan
+                            </a>
+                        </li>
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                PDAR
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+
+    
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    
+
+</article>
+                
+                            </li>
+                            <li class="top-cars__item">
+
+                                <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Mercedes-Benz E200/220 or similar
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Sedan
+                            </a>
+                        </li>
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                PDAR
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+
+    
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    
+
+</article>
+                                
+                            </li>
+                            <li class="top-cars__item">
+
+                                <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-2.jpg" alt="Volkswagen Passat Estate" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Volkswagen Passat Estate
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Estate
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+
+    
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    
+
+</article>
+
+                            </li>
+                            <li class="top-cars__item">
+
+                                <article class="auto-card">
+    
+    
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="images/content/auto-card-3.jpg" alt="Intermediate, 4-5 Door, Manual, Aircon (Group E)" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        Intermediate, 4-5 Door, Manual, Aircon (Group E)
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                Sedan
+                            </a>
+                        </li>
+                    
+                        <li class="tag__item">
+                            <a class="tag__link" href="undefined.html">
+                                PDAR
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+    
+
+    
+
+    
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    
+
+</article>
+                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+    <div class="footer__wrapper">
+        <a class="logo footer__logo" href="/">
+            <img src="images/content/logo.svg" alt="Logo" width="140" height="30">
+        </a>
+    </div>
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__lang">
+                    <label class="footer__label" for="select1">Site Language/Currency
+                    </label>
+                    <select class="footer__select" name="[footer]select" id="select1">
+                        <option>English</option>
+                        <option>Deutsch</option>
+                        <option>Czech</option>
+                    </select>
+                    
+                    <label class="footer__label" for="select2">
+                        <span class="sr-only">Currency</span>
+                    </label>
+                    <select class="footer__select footer__select--currency" name="[footer]select" id="select2">
+                        <option>Usd</option>
+                        <option>Eur</option>
+                        <option>Czk</option>
+                    </select>
+                </div>
+                <nav class="footer__nav-top">
+                    <div class="footer__box">
+                        <span class="footer__title title">
+                            Company
+                        </span>
+                        <ul class="footer__nav">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    About
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Contact us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__box">
+                        <span class="footer__title title">
+                            Legal
+                        </span>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Legal Information
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__box">
+                        <span class="footer__title title">
+                            Explore
+                        </span>
+                        <ul class="footer__nav">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    How it works?
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    Help
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    FAQs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="footer__bottom">
+            <ul class="social">
+                <li class="social__item">
+                    <a class="social__link social__link--facebook" target="_blank" href="https://www.facebook.com/">
+                        <span class="sr-only">facebook</span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--tweeter" target="_blank" href="https://twitter.com/tweeter">
+                        <span class="sr-only">tweeter</span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--instagram" target="_blank" href="https://www.instagram.com/?hl=de">
+                        <span class="sr-only">instagram</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__copy">
+                © Fleetster Car Rent als 2018 All Rights Reserved.
+            </div>
+        </div>
+    </div>
+</footer>

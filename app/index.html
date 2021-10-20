@@ -9,11 +9,14 @@
         <section class="hero" style="background-image: url(images/content/hero-bg.jpg);">
             <div class="container">
                 <div class="hero__content">
-                    <h2 class="hero__title title">
+                    <h1 class="hero__title title">
                         Find your ideal car from 500<span>+</span> cars
-                    </h2>
+                    </h1>
                     
-                    @@include('./parts/index/_hero-tabs.html')
+                    @@include('./parts/components/_tabs-btn.html', {
+                        "btn1": "Same as Drop-off",
+                        "btn2": "Different Drop-off",
+                    })
 
                     @@include('./parts/index/_hero-form.html')
 

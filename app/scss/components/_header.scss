@@ -3,12 +3,20 @@
     left: 0;
     right: 0;
     top: 0;
-    z-index: 11;
-    padding: 20px 0;
+    padding: 20px 0 17px;
+    z-index: 100;
     transition: background-color 0.3s, padding 0.4s;
 
-    @include r($mobile-sm) {
+    @include r($mobile-md) {
         padding: 10px 0;
+    }
+
+    &--black {
+        background-color: $black;
+
+        &.sticky {
+            background-color: transparent;
+        }
     }
 
     &.sticky {
@@ -18,7 +26,6 @@
         @include r($mobile-md) {
             padding: 5px 0;
         }
-
         
         .menu__box {
 
@@ -79,11 +86,10 @@
 }
 
 .menu {
-
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     &__box {
         display: flex;
@@ -159,14 +165,12 @@
             font-size: 18px;
         }
     }
-
     
     &__burger {
         display: none;
         position: relative;
         width: 45px;
         height: 45px;
-        z-index: 5;
         border-radius: 50%;
 
         span::before,
@@ -222,6 +226,10 @@
                     }
                 }
             }
+        }
+
+        &._active {
+            pointer-events: none;
         }
     }
 }

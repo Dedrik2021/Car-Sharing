@@ -1,0 +1,76 @@
+<article class="auto-card">
+    
+    @@if (autoCard === true) {
+        <div class="auto-card__box">
+            <div class="auto-card__img-wrapper">
+                <img src="@@image-url" alt="@@alt" width="205" height="120">
+            </div>
+            <div class="auto-card__wrapper-box">
+                <a class="auto-card__link" href="/rent-info.html">
+                    <h2 class="auto-card__title title">
+                        @@title
+                    </h2> 
+                </a>
+                <ul class="tag">
+    
+                    @@for (var i = 0; i < arr.length; i++) {
+                        <li class="tag__item">
+                            <a class="tag__link" href="`+arr[i].path+`.html">
+                                `+arr[i] .title+`
+                            </a>
+                        </li>
+                    }
+                    
+                </ul>
+    }
+
+    @@if (autoCardAdvantages === true) {
+    
+        <div class="auto-card__advantages">
+            <span class="auto-card__advantages-item">
+                Manual transmission
+            </span>
+            <span class="auto-card__advantages-item">
+                Unlimited mileage
+            </span>
+            <span class="auto-card__advantages-item">
+                Navigation system
+            </span>
+        </div>
+    }
+
+    @@if (autoCardExpanded === true) {
+                <span class="auto-card__includes-title">
+                    This package includes:
+                </span>
+                <span class="auto-card__includes-item">
+                    Unlimited free kilometers incl.
+                </span>
+                <span class="auto-card__includes-item">
+                    Sat Nav included
+                </span>
+            </div>
+        </div>
+
+
+        <div class="auto-card__wrapper">
+            <div class="auto-card__price">
+                <span class="auto-card__price-title">
+                    Your pricing
+                </span>
+                <div class="auto-card__price-wrapper">
+                    <span class="auto-card__currency"><span>$</span>36</span>
+                    <span class="auto-card__span">per day</span>
+                </div>
+                <div class="auto-card__price-wrapper auto-card__price-wrapper--right">
+                    <span class="auto-card__currency"><span>$</span>149</span>
+                    <span class="auto-card__span">total</span>
+                </div>
+            </div>
+            <a class="auto-card__btn btn btn--yellow" href="/rent-info.html">
+                Book now
+            </a>
+        </div>
+    }
+
+</article>

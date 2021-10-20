@@ -5,6 +5,11 @@
         display: block;
     }
 
+    @include r($mobile-sm) {
+        max-width: 600px;
+        width: 100%;
+    }
+
     &__box {
         position: relative;
         max-width: 380px;
@@ -14,7 +19,6 @@
         @include r($mobile-lg) {
             margin: 0 auto 20px;
             max-width: 700px;
-
         }
     }
 
@@ -63,15 +67,46 @@
         }
 
         @include r($mobile-sm) {
-            display: inline-block;
-            text-align: right;
+            flex-direction: column;
+        }
+    }
+
+    &__wrapper-box {
+        position: relative;
+        margin-right: 15px;
+        max-width: 212px;
+        width: 100%;
+        display: flex;
+
+        @include r($mobile-sm) {
+            margin-right: 0;
+            max-width: 600px;
+            height: 100%;
         }
     }
 
     &__date-label {
-        max-width: 212px;
+        position: absolute;
+        width: 17px;
+        height: 20px;
+        background-image: url(../images/content/date-icon.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 15px;
+
+        @include r($mobile-sm) {
+            top: 25px;
+        }
+    }
+
+    &__date {
+        font-size: 13px;
+        font-weight: 300;
         width: 100%;
-        margin-right: 15px;
+        padding: 17px 15px 14px 40px;
+        color: $gray;
 
         @include r($mobile-md) {
             max-width: 200px;
@@ -79,25 +114,26 @@
         }
 
         @include r($mobile-sm) {
+            margin: 0 0 20px;
             max-width: 550px;
         }
 
-        &.active {
-            pointer-events: none;
-            opacity: 0.5;
+        &--different {
+
+            &.active {
+                pointer-events: none;
+                opacity: 0.5;
+            }
         }
     }
 
-    &__date {
-        width: 100%;
-        padding: 13px 15px 14px;
-        font-size: 13px;
-        font-weight: 300;
-        color: $gray;
-
-        @include r($mobile-sm) {
-            margin: 0 0 20px;
+    .air-datepicker {
+        
+        .active {
+            max-width: 100px !important;
+            width: 100% !important;
         }
+        
     }
 
     &__btn {
@@ -113,7 +149,7 @@
 
         @include r($mobile-sm) {
             padding: 15px 50px;
-            margin-left: auto;
+            width: 100%;
         }
     }
 }
