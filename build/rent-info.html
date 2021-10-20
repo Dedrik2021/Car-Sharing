@@ -186,16 +186,27 @@
 
                             <ul class="tabs-btn">
     <li class="tabs-btn__item">
-        <button class="tabs-btn__btn tabs-btn__btn--same btn active" type="button" onclick="openContent(event, 'included')" id="defaultOpen">
+        <button class="tabs-btn__btn tabs-btn__btn--same btn btn--info active" type="button" onclick="openContent(event, 'included')" id="defaultOpen">
             What’s included
         </button>
     </li>
     <li class="tabs-btn__item">
-        <button class="tabs-btn__btn tabs-btn__btn--different btn" type="button" onclick="openContent(event, 'not-included')">
+        <button class="tabs-btn__btn tabs-btn__btn--different btn btn--info" type="button" onclick="openContent(event, 'not-included')">
             Not included in rate
         </button>
     </li>
 </ul>
+
+<!-- <li class="product-tabs__top-item">
+    <button class="product-tabs__btn btn active" type="button" onclick="openContent(event, 'description')" id="defaultOpen">
+        Description
+    </button>
+</li>
+<li class="product-tabs__top-item">
+    <button class="product-tabs__btn btn" type="button" onclick="openContent(event, 'Additional-info')">
+        Additional information
+    </button>
+</li> -->
 
                             <ul class="rent-info__list">
                                 <li class="rent-info__item" id="included">
@@ -234,8 +245,8 @@
                             </div>
                             <ul class="accessories">
                                 <li class="accessories__item">
-                                    <input class="accessories__check" type="checkbox" name="[accessories]checkbox" id="ski" checked required>
-                                    <div class="accessories__checkbox"><span></span></div>
+                                    <input class="accessories__check check" type="checkbox" name="[accessories]checkbox" id="ski" checked required>
+                                    <div class="accessories__checkbox checkbox"><span></span></div>
                                     <label class="accessories__label active" for="ski" id="accessories-ski" tabindex="0">
                                         <span class="accessories__box">
                                             <span class="accessories__stuff">Ski rack</span>
@@ -244,8 +255,8 @@
                                     </label>
                                 </li>
                                 <li class="accessories__item">
-                                    <input class="accessories__check" type="checkbox" name="[accessories]checkbox" id="infant" required>
-                                    <div class="accessories__checkbox"><span></span></div>
+                                    <input class="accessories__check check" type="checkbox" name="[accessories]checkbox" id="infant" required>
+                                    <div class="accessories__checkbox checkbox"><span></span></div>
                                     <label class="accessories__label" for="infant" id="accessories-infant" tabindex="0">
                                         <span class="accessories__box">
                                             <span class="accessories__stuff">Infant seat</span>
@@ -254,8 +265,8 @@
                                     </label>
                                 </li>
                                 <li class="accessories__item">
-                                    <input class="accessories__check" type="checkbox" name="[accessories]checkbox" id="toddler" required>
-                                    <div class="accessories__checkbox"><span></span></div>
+                                    <input class="accessories__check check" type="checkbox" name="[accessories]checkbox" id="toddler" required>
+                                    <div class="accessories__checkbox checkbox"><span></span></div>
                                     <label class="accessories__label" for="toddler" id="accessories-toddler" tabindex="0">
                                         <span class="accessories__box">
                                             <span class="accessories__stuff">Toddler seat</span>
@@ -264,8 +275,8 @@
                                     </label>
                                 </li>
                                 <li class="accessories__item">
-                                    <input class="accessories__check" type="checkbox" name="[accessories]checkbox" id="chains" required>
-                                    <div class="accessories__checkbox"><span></span></div>
+                                    <input class="accessories__check check" type="checkbox" name="[accessories]checkbox" id="chains" required>
+                                    <div class="accessories__checkbox checkbox"><span></span></div>
                                     <label class="accessories__label" for="chains" id="accessories-chains" tabindex="0">
                                         <span class="accessories__box">
                                             <span class="accessories__stuff">Snow chains</span>

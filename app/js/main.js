@@ -194,7 +194,7 @@ function openContent(evt, contentName) {
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("tabs-btn__btn");
+    tablinks = document.getElementsByClassName("btn--info");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }

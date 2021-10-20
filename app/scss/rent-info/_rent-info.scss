@@ -190,22 +190,19 @@
         }
     }
 
+    &__checkbox,
     &__check {
         position: absolute;
         top: 13px;
-        right: 8px;
-        width: 13px;
-        height: 13px;
-        opacity: 0;
+        right: 10px;
+    }
 
+    &__check {
+    
         &:checked {
 
             & + .accessories__checkbox {
                 border-color: $white;
-                
-                span {
-                    opacity: 1;
-                }
             } 
         }
     }
@@ -237,25 +234,10 @@
     }
 
     &__checkbox {
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        top: 13px;
-        right: 10px;
-        z-index: 5;
-        border: 1px solid $black;
-        border-radius: 3px;
-        transition: opacity 0.4s, border-color 0.4s;
 
         span {
-            position: absolute;
-            content: "";
-            width: 18px;
-            height: 13px;
             right: -5px;
             top: 0px;
-            opacity: 0;
-            background-repeat: no-repeat;
             background-image: url(../images/content/check-white.png);
         }
     }
