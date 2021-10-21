@@ -135,6 +135,18 @@ $(function() {
         ]
     });
     
+    $('.interested__slider').slick({
+        prevArrow: '<button type="button" class="slick-btn slick-btn--prev">Prev</button>',
+        nextArrow: '<button type="button" class="slick-btn slick-btn--next">Next</button>',
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        draggable: false,
+        // arrows: false,
+        // fade: true,
+        // adaptiveHeight: true,
+        // autoplay: true,
+        // autoplaySpeed: 4000,
+    });
 
     $('.footer__select, .auto-form__select, .auto-park__price').styler();
 

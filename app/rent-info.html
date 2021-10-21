@@ -199,11 +199,117 @@
                                 </div>
                             </div>
                         </div>
+                        <span class="rent-info__questions">
+                            Have pre-booking questions?
+                        </span>
+                        <span class="rent-info__touch">
+                            Get in touch with us
+                        </span>
+                        <ul class="copy">
+                            <li class="copy__item">
+                                <button class="copy__btn copy__btn--add btn" type="button">Add to list</button>
+                            </li>
+                            <li class="copy__item">
+                                <button class="copy__btn copy__btn--print btn" type="button">Print</button>
+                            </li>
+                            <li class="copy__item">
+                                <button class="copy__btn copy__btn--share btn" type="button">Share</button>
+                            </li>
+                        </ul>
+                        <a class="rent-info__link" href="#">Report error</a>
                     </div>
                 </div>
             </div>
         </div>
-        
+        <section class="interested">
+            <div class="container">
+                <h2 class="interested__title title">
+                    You may also be interested in
+                </h2>
+                <ul class="interested__slider">
+                    <li class="interested__item">
+
+                        @@include('./parts/rent-info/_top-cart.html', {
+                            "image-url": "images/content/top-picks-4.jpg",
+                            "alt": "Opel Corsa",
+                            "title": "Opel Corsa",
+                            "preferred": "Economy",
+                        })
+
+                    </li>
+                    <li class="interested__item">
+
+                        @@include('./parts/rent-info/_top-cart.html', {
+                            "image-url": "images/content/top-picks-1.jpg",
+                            "alt": "Chevrolet Tahoe",
+                            "title": "Chevrolet Tahoe",
+                            "preferred": "Most preferred in Full-size SUV",
+                        })
+
+                    </li>
+                    <li class="interested__item">
+
+                        @@include('./parts/rent-info/_top-cart.html', {
+                            "image-url": "images/content/top-picks-2.jpg",
+                            "alt": "Hyundai Accent",
+                            "title": "Hyundai Accent",
+                            "preferred": "Most preferred in Economy",
+                        })
+
+                    </li>
+                    <li class="interested__item">
+
+                        @@include('./parts/rent-info/_top-cart.html', {
+                            "image-url": "images/content/top-picks-3.jpg",
+                            "alt": "Kia Sportage",
+                            "title": "Kia Sportage",
+                            "preferred": "Most preferred mid-SUV",
+                        })
+
+                    </li>
+                    <li class="interested__item">
+
+                        @@include('./parts/rent-info/_top-cart.html', {
+                            "image-url": "images/content/top-picks-4.jpg",
+                            "alt": "Opel Corsa",
+                            "title": "Opel Corsa",
+                            "preferred": "Economy",
+                        })
+
+                    </li>
+                    <li class="interested__item">
+
+                        @@include('./parts/rent-info/_top-cart.html', {
+                            "image-url": "images/content/top-picks-1.jpg",
+                            "alt": "Chevrolet Tahoe",
+                            "title": "Chevrolet Tahoe",
+                            "preferred": "Most preferred in Full-size SUV",
+                        })
+
+                    </li>
+                    <li class="interested__item">
+
+                        @@include('./parts/rent-info/_top-cart.html', {
+                            "image-url": "images/content/top-picks-2.jpg",
+                            "alt": "Hyundai Accent",
+                            "title": "Hyundai Accent",
+                            "preferred": "Most preferred in Economy",
+                        })
+
+                    </li>
+                    <li class="interested__item">
+
+                        @@include('./parts/rent-info/_top-cart.html', {
+                            "image-url": "images/content/top-picks-3.jpg",
+                            "alt": "Kia Sportage",
+                            "title": "Kia Sportage",
+                            "preferred": "Most preferred mid-SUV",
+                        })
+
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     @@include('./parts/components/_footer.html')
