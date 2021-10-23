@@ -7,12 +7,12 @@
 
     @include r($mobile-lg) {
         display: block;
-        padding: 90px 0 15px;
+        padding: 90px 0 25px;
     }
 
     @include r($mobile-md) {
         display: block;
-        padding: 80px 0 15px;
+        padding: 80px 0 25px;
     }
 
     &__wrapper {
@@ -126,7 +126,7 @@
             &__dropdown {
                 width: 100%;
                 margin: 2px 0 0;
-                padding: 0;
+                padding: 0s;
                 border-radius: 2px;
                 background-color: $white;
                 box-shadow: none;
@@ -134,23 +134,24 @@
 
                 ul {
                     background-color: $white-100;
-                }
 
-                li {
-                    border-radius: 3px;
-                    padding: 13px 10px 13px 15px;
-                    transition: background-color 0.4s, color 0.4s;
-                    
-                    &:hover {
-                        background-color: $green;
+                    li {
+                        background-color: $white;
+                        border-radius: 3px;
+                        transition: background-color 0.4s, color 0.4s;
+                        
+                        &:hover {
+                            background-color: $green;
+                        }
                     }
-                }
 
-                .selected.sel {
-                    background-color: $yellow;
-
-                    &:hover {
-                        background-color: $green;
+                    .selected.sel {
+                        background-color: $yellow;
+                        padding: 13px 10px 13px 15px;
+    
+                        &:hover {
+                            background-color: $green;
+                        }
                     }
                 }
             }

@@ -1,0 +1,164 @@
+.rent-info {
+
+    &__accessories-wrapper {
+        padding-bottom: 13px;
+        border-bottom: 1px solid $white-200;
+    }
+
+    &__accessories-title {
+        font-size: 20px;
+        font-weight: 400;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    &__accessories-warning {
+        font-weight: 300;
+        letter-spacing: 0.03rem;
+        color: $red;
+
+        @include r($mobile-md) {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    }
+}
+
+.accessories {
+    display: flex;
+    padding-top: 40px;
+
+    @include r($mobile-lg) {
+        padding-top: 30px;
+    }
+
+    @include r($mobile-md) {
+        justify-content: center;
+    }
+    
+    @include r($mobile-sm) {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__item {
+        position: relative;
+        max-width: 138px;
+        width: 100%;
+        height: 100px;
+        border-radius: 3px;
+        border: 1px solid $white-200;
+        transition: background-color 0.4s;
+
+        @include r($mobile-sm) {
+            max-width: 100%;
+        }
+
+        &:hover {
+            background-color: $yellow;
+
+            .accessories {
+
+                &__stuff,
+                &__price {
+                    color: $white;
+                }
+
+                &__checkbox {
+                    border-color: $white;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 25px;
+
+            @include r($mobile-lg) {
+                margin-right: 10px;
+            }
+
+            @include r($mobile-sm) {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    &__checkbox,
+    &__check {
+        position: absolute;
+        top: 13px;
+        right: 10px;
+    }
+
+    &__check {
+
+        &:checked {
+
+            &+.checkbox {
+                border-color: $white;
+            }
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding: 20px 5px 0;
+        cursor: pointer;
+        transition: background-color 0.4s;
+
+        @include r($mobile-sm) {
+            padding-top: 0;
+        }
+
+        &.active {
+            background-color: $green;
+
+            .accessories__stuff,
+            .accessories__price {
+                color: $white;
+            }
+        }
+
+        &:focus {
+            outline-color: $yellow;
+        }
+    }
+
+    &__checkbox {
+
+        span {
+            right: -5px;
+            top: -2px;
+            background-image: url(../images/content/check-white.png);
+        }
+    }
+
+    &__price,
+    &__stuff {
+        display: block;
+        font-size: 14px;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+        transition: color 0.4s;
+
+        @include r($mobile-lg) {
+            text-align: center;
+        }
+    }
+
+    &__stuff {
+        line-height: 1.6;
+    }
+
+    &__price {
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,33 @@
+.rent-info {
+
+    #not-included {
+        display: none;
+    }
+
+    &__item {
+
+        div {
+            max-width: 730px;
+
+            @include r($mobile-md) {
+                max-width: 100%;
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.7;
+                letter-spacing: 0.03rem;
+                padding-right: 15px;
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+
+                    @include r($mobile-lg) {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

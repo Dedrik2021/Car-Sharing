@@ -90,8 +90,6 @@ $(function() {
         $('#accessories-chains').toggleClass('active')
     })
 
-    
-
     const cards = document.querySelectorAll('.auto-park .auto-park__wrapper');
 
     cards.forEach((card)=>{
@@ -141,11 +139,31 @@ $(function() {
         slidesToShow: 4,
         slidesToScroll: 1,
         draggable: false,
-        // arrows: false,
-        // fade: true,
-        // adaptiveHeight: true,
-        // autoplay: true,
-        // autoplaySpeed: 4000,
+        adaptiveHeight: true,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     });
 
     $('.footer__select, .auto-form__select, .auto-park__price').styler();
@@ -158,7 +176,6 @@ $(function() {
     new AirDatepicker('#hero-date2', {
         timepicker: true,
         timeformat: 'hh:mm AA',
-        
     });
 
     dpMin = new AirDatepicker('#hero-date1', {
@@ -174,26 +191,6 @@ $(function() {
             dpMin.update({
                 maxDate: date,
             })
-        }
-    })
-
-    new AirDatepicker('#hero-date1', {
-        dateFormat(date) {
-            return date.toLocaleString('ja', {
-                year: 'numeric',
-                day: '2-digit',
-                month: 'long'
-            });
-        }
-    })
-
-    new AirDatepicker('#hero-date2', {
-        dateFormat(date) {
-            return date.toLocaleString('ja', {
-                year: 'numeric',
-                day: '2-digit',
-                month: 'long'
-            });
         }
     })
 });
@@ -215,3 +212,4 @@ function openContent(evt, contentName) {
 }
 
 document.getElementById("defaultOpen").click();
+

@@ -95,7 +95,10 @@ a {
     &--yellow-hover {
         color: $white;
         background-color: $green;
+    }
 
+    &--yellow-hover,
+    &--yellow {
 
         &:hover {
             background-color: $yellow;

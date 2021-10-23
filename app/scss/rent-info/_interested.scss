@@ -1,0 +1,142 @@
+.interested {
+    background-color: $white-400;
+    padding: 70px 0 125px;
+
+    @include r($mobile-lg) {
+        padding: 40px 0 90px;
+    }
+
+    @include r($mobile-md) {
+        padding: 40px 0 50px;
+    }
+
+    &__title {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 50px;
+
+        @include r($mobile-lg) {
+            text-align: left;
+        }
+
+        @include r($mobile-md) {
+            max-width: 60%;
+        }
+
+        @include r($mobile-sm) {
+            max-width: 100%;
+            margin-bottom: 60px;
+        }
+    }
+
+    &__slider {
+        max-width: 1040px;
+        margin: 0 auto;
+
+        @include r($mobile-lg) {
+            max-width: 800px;
+        }
+
+        @include r($mobile-md) {
+            max-width: 100%;
+        }
+    }
+
+    &__item {
+        max-width: 230px;
+        margin: 0 20px;
+        height: 220px;
+
+        @include r($mobile-md) {
+            margin: 0 20px;
+            max-width: 90%;
+        }
+    }
+
+    .slick-btn {
+        top: -90px;
+
+        @include r($mobile-sm) {
+            top: -40px;
+        }
+
+        &--prev {
+
+            @include r($mobile-sm) {
+                left: 10%;
+            }
+        }
+
+        &--next {
+
+            @include r($mobile-sm) {
+                right: 10%;
+            }
+        }
+    }
+
+    .top-cart {
+        width: 100%;
+        padding-top: 5px;
+        background-color: $white;
+
+        &__img-wrapper {
+            max-width: 220px;
+            height: 130px;
+            margin: 0 auto;
+
+            @include r($mobile-sm) {
+                max-width: 280px;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &__inner {
+            padding: 0 20px 0 10px;
+        }
+
+        &__title {
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        &__preferred {
+            font-weight: 300;
+            font-size: 11px;
+            display: block;
+            padding-bottom: 5px;
+            border-bottom: 1px solid $white-200;
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 7px 0 10px 5px;
+        }
+
+        &__price {
+            font-weight: 300;
+            font-size: 11px;
+
+            span {
+                font-weight: 600;
+                font-size: 24px;
+                color: $yellow;
+            }
+        }
+
+        &__btn {
+            padding: 8px 25px 7px;
+            transition: background-color 0.4s;
+
+            @include r($mobile-sm) {
+                padding: 8px 20px 7px;
+            }
+        }
+    }
+}

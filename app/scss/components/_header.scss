@@ -13,16 +13,12 @@
 
     &--black {
         background-color: $black;
-
-        &.sticky {
-            background-color: transparent;
-        }
     }
 
     &.sticky {
         background-color: $yellow;
         padding: 10px 0;
-
+        
         @include r($mobile-md) {
             padding: 5px 0;
         }

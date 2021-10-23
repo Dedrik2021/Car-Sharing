@@ -1,0 +1,76 @@
+.copy {
+    display: flex;
+    border: 1px solid $white-600;
+    background-color: $white-700;
+    padding: 23px 25px 12px 30px;
+    margin-bottom: 15px;
+
+    @include r($mobile-xl) {
+        padding: 20px 10px 12px 20px;
+    }
+
+    @include r($mobile-md) {
+        justify-content: space-around;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 35px;
+
+            @include r($mobile-xl) {
+                margin-right: 30px;
+            }
+
+            @include r($mobile-sm) {
+                margin-right: 15px;
+            }
+
+            
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        text-transform: none;
+        font-weight: 300;
+        font-size: 14px;
+        padding: 0 0 5px 25px;
+        position: relative;
+        border-bottom: 1px solid transparent;
+        border-radius: 0;
+        transition: border-bottom-color 0.4s;
+
+        @include r($mobile-md) {
+            font-size: 15px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 20px;
+            left: 0;
+            background-repeat: no-repeat;
+        }
+
+        &--add::before {
+            background-image: url(../images/content/heart-icon.svg);
+        }
+
+        &--print::before {
+            background-image: url(../../images/content/print-icon.svg);
+        }
+
+        &--share::before {
+            background-image: url(../images/content/share-icon.svg);
+        }
+
+        &:focus,
+        &:hover {
+            border-bottom-color: $black;
+            outline-color: transparent;
+        }
+    }
+}
