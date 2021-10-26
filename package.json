@@ -24,6 +24,7 @@
     "jquery-form-styler": "^2.0.2",
     "js-datepicker": "^5.18.0",
     "slick-carousel": "^1.8.1",
+    "slidetoggle": "^3.2.2",
     "swiper": "^7.0.8"
   }
 }

@@ -3,9 +3,8 @@
     &__filters {
         max-width: 320px;
         width: 100%;
-        min-height: 0;
         position: absolute;
-        padding: 25px 25px 210px 20px;
+        padding: 25px 25px 210px 15px;
         border: 1px solid $white-300;
         border-radius: 5px;
         margin-right: 20px;
@@ -17,14 +16,14 @@
         }
 
         @include r($mobile-lg) {
-            position: absolute;
-            z-index: 16;
+            position: fixed;
+            z-index: 23;
             top: 0px;
             left: -120%;
             height: 100vh;
             max-width: 45%;
             margin-right: 0;
-            padding: 80px 25px 300px;
+            padding: 80px 25px 100px;
             background-color: $white;
             overflow: auto;
             border: 2px solid $white-200;
@@ -32,6 +31,7 @@
 
         @include r($mobile-sm) {
             max-width: 100%;
+            padding: 80px 25px 50px;
         }
 
         &._active {
@@ -53,7 +53,7 @@
         max-width: 105px;
         margin-bottom: 10px;
 
-        span {
+        #clicks {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -73,49 +73,55 @@
         padding: 0px 0 38px;
         border-bottom: 1px solid $white-300;
         height: 0;
-        transition: height 0.3s ease-in, padding 0.4s ease-in-out;
+        // transition: height 1s, padding 0.4s ease-in-out;
 
         &--type {
             padding-top: 15px;
-
-            &.active {
-                height: 465px;
-            }
         }
 
+        &--type,
+        &--size,
+        &--specific,
         &--range {
+            transition: height 0.4s ease, padding 0.4s;
 
             &.active {
-                height: 230px;
-            }
-        }
+                height: auto;
+                padding: 15px 0;
 
-        &--size {
+                .auto-park__wrapper {
+                    opacity: 1;
+                    visibility: visible;
 
-            &.active {
-                height: 155px;
-            }
-        }
-
-        &--specific {
-
-            &.active {
-                height: 335px;
-            }
-        }
-
-        &.active {
-            padding: 15px 0;
-
-            .auto-park__wrapper {
-                opacity: 1;
-                visibility: visible;
-
-                &:not(:last-child) {
-                    margin-bottom: 10px;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }
+
+        // &--size {
+
+
+        // }
+
+        // &--specific {
+
+
+        // }
+
+        // &.active {
+        //     padding: 15px 0;
+
+        //     .auto-park__wrapper {
+        //         opacity: 1;
+        //         visibility: visible;
+
+        //         &:not(:last-child) {
+        //             margin-bottom: 10px;
+        //         }
+        //     }
+        // }
     }
 
     &__btn {
@@ -162,12 +168,18 @@
         align-items: flex-start;
         position: relative;
         opacity: 0;
+        border-radius: 3px;
         visibility: hidden;
         background-color: $white;
-        transition: opacity 0.3s ease-out, visibility 0.6s ease-out, margin-bottom 0.4s;
+        transition: opacity 0.3s ease-out, visibility 0.6s ease-out, margin-bottom 0.4s, background-color 0.4s;
+
+        &:hover {
+            background-color: $white-200;
+        }
     }
 
     &__label {
+        width: 100%;
         font-size: 15px;
         font-weight: 300;
         line-height: 1.6;
@@ -178,25 +190,27 @@
         max-width: 80%;
         word-wrap: break-word;
         @include line-clamp(1);
-        transition: border-bottom-color 0.4s;
-
-        &:hover {
-            border-bottom-color: $blue;
-        }
+        transition: border-bottom-color 0.4s, font-weight 0.4s;
 
         &.active {
             font-weight: 600;
         }
     }
 
-    &__check {
-        left: 1px;
+    &__input-check {
+        left: 6px;
         top: 3px;
         margin: 0;
+        opacity: 0;
+        width: 15px;
+        height: 15px;
+        z-index: 10;
     }
 
     &__checkbox {
         position: relative;
+        left: 5px;
+        z-index: 5;
         top: 3px;
         background-color: $white;
         margin-right: 20px;

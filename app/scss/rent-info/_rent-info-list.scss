@@ -1,10 +1,15 @@
 .rent-info {
 
-    #not-included {
-        display: none;
-    }
-
     &__item {
+
+        &--not-included,
+        &--included {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
 
         div {
             max-width: 730px;

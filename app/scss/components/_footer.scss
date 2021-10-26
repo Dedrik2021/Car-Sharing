@@ -203,10 +203,12 @@
             background: transparent;
             background-color: $white;
             box-shadow: none;
+            transition: border-color 0.4s, background-color 0.4s;
     
             &:hover {
                 background: transparent;
                 background-color: $white;
+                border-color: $yellow;
             }
         }
     

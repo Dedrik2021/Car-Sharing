@@ -9,7 +9,7 @@
         padding: 20px 10px 12px 20px;
     }
 
-    @include r($mobile-md) {
+    @include r($mobile-lg) {
         justify-content: space-around;
     }
 
@@ -17,10 +17,6 @@
 
         &:not(:last-child) {
             margin-right: 35px;
-
-            @include r($mobile-xl) {
-                margin-right: 30px;
-            }
 
             @include r($mobile-sm) {
                 margin-right: 15px;

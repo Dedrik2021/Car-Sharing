@@ -84,6 +84,15 @@
         }
     }
 
+    &__img-link {
+        border-radius: 50px;
+        transition: background-color 0.4s;
+
+        &:hover {
+            background-color: $white-200;
+        }
+    }
+
     &__wrapper-box {
         max-width: 260px;
 
@@ -119,7 +128,7 @@
         }
     }
 
-    .tag {
+    .tags {
         display: flex;
         margin-bottom: 15px;
 

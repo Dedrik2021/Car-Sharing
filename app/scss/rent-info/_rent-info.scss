@@ -5,23 +5,65 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
+    &__content {
+        padding: 55px 0 150px;
+        display: flex;
+
+        @include r($mobile-xl) {
+            padding-bottom: 120px;
+        }
+
+        @include r($mobile-lg) {
+            padding-bottom: 90px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include r($mobile-md) {
+            flex-direction: column;
+            padding-bottom: 40px;
+        }
+
+        @include r($mobile-sm) {
+            padding: 20px 0 40px;
+        }
+    }
+
+    &__inner {
+        max-width: 820px;
+        padding: 0 40px 0 5px;
+        margin-right: 85px;
+
+        @include r($mobile-xl) {
+            margin-right: 25px;
+        }
+
+        @include r($mobile-lg) {
+            padding: 0;
+            margin: 0 0 40px;
+        }
+    }
+
+
     &__wrapper {
-        background-color: $white-400;
-        box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.1);
+        padding-bottom: 20px;
+        margin-bottom: 65px;
+
+        @include r($mobile-lg) {
+            margin-bottom: 40px;
+        }
     }
 
     .auto-card {
+        position: relative;
+        z-index: 5;
         border-left: none;
-        padding: 55px 0 20px;
-        
-        @include r($mobile-md) {
-            padding: 30px 0;
-        }
+        padding: 0;
 
         &__box {
             max-width: 820px;
             border-right: none;
-            padding: 0 0 0 30px;
+            padding: 0 0 0 25px;
 
             @include r($mobile-lg) {
                 padding: 0 0 0 10px;
@@ -58,6 +100,10 @@
             }
         }
 
+        &__img-link {
+            pointer-events: none;
+        }
+
         &__wrapper-box {
             max-width: 100%;
         }
@@ -84,14 +130,11 @@
             grid-template-columns: 1fr 1fr;
             column-gap: 25px;
 
-            @include r($mobile-lg) {
+            @include r($mobile-md) {
                 display: flex;
                 flex-direction: column;
             }
 
-            @include r($mobile-md) {
-                display: inline-block;
-            }
         }
 
         &__advantages-item {
@@ -121,44 +164,7 @@
         }
     }
 
-    &__content {
-        padding-bottom: 300px;
-        display: flex;
-
-        @include r($mobile-xl) {
-            padding-bottom: 120px;
-        }
-
-        @include r($mobile-lg) {
-            padding-bottom: 90px;
-        }
-
-        @include r($mobile-md) {
-            flex-direction: column;
-            padding-bottom: 40px;
-        }
-    }
-
-    &__inner {
-        max-width: 820px;
-        padding: 65px 40px 0 5px;
-        margin-right: 85px;
-
-        @include r($mobile-xl) {
-            margin-right: 25px;
-        }
-
-        @include r($mobile-lg) {
-            margin-right: 0;
-            padding: 50px 15px 0 0;
-        }
-
-        @include r($mobile-md) {
-            padding: 50px 0 0;
-            margin-bottom: 40px;
-        }
-    }
-
+    
     &__tabs {
         margin-bottom: 85px;
 
@@ -167,7 +173,7 @@
         }
     }
 
-    .tabs-btn {
+    .tabs-btns {
         margin-bottom: 35px;
         border-bottom: 1px solid $white-200;
 
@@ -203,18 +209,14 @@
     }
 
     &__box {
+        position: relative;
+        z-index: 5;
         max-width: 340px;
         width: 100%;
-        margin-top: -165px;
         background-color: $white;
 
-        @include r($mobile-xl) {
-            margin-top: -100px;
-        }
-
-        @include r($mobile-md) {
-            margin: 0 auto;
-            max-width: 500px;
+        @include r($mobile-lg) {
+            max-width: 600px;
         }
     }
 
@@ -226,10 +228,6 @@
         position: relative;
 
         @include r($mobile-lg) {
-            padding: 20px 15px 17px 50px;
-        }
-
-        @include r($mobile-md) {
             padding: 20px 15px 17px 65px;
         }
 
@@ -249,10 +247,6 @@
             background-image: url(../images/content/discount-icon.png);
 
             @include r($mobile-lg) {
-                left: 10px;
-            }
-
-            @include r($mobile-md) {
                 left: 20px;
             }
 
@@ -287,10 +281,6 @@
         border-bottom: none;
 
         @include r($mobile-lg) {
-            padding: 15px;
-        }
-
-        @include r($mobile-md) {
             justify-content: space-around;
         }
     }
@@ -342,7 +332,7 @@
         border: 1px solid $gray-300;
         margin-bottom: 25px;
 
-        @include r($mobile-lg) {
+        @include r($mobile-md) {
             padding: 20px 10px 15px;
             margin-bottom: 15px;
         }
@@ -369,7 +359,7 @@
         letter-spacing: 0.02rem;
         background-color: $white;
 
-        @include r($mobile-md) {
+        @include r($mobile-lg) {
             font-size: 12px;
             top: -7px;
         }
@@ -423,7 +413,7 @@
     &__touch {
         margin-bottom: 27px;
 
-        @include r($mobile-lg) {
+        @include r($mobile-md) {
             margin-bottom: 15px;
         }
     }

@@ -27,6 +27,7 @@ function scripts() {
         'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/air-datepicker/air-datepicker.js',
+        'node_modules/slidetoggle/dist/slidetoggle.js',
         'app/js/main.js',
         
     ])

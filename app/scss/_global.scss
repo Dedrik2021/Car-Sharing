@@ -17,7 +17,7 @@ body {
 
     &.lock {
 
-        @include r($mobile-md) {
+        @include r($mobile-lg) {
             overflow: hidden;
         }
     }
@@ -172,7 +172,7 @@ a {
     bottom: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 15;
+    z-index: 22;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s, visibility 0.4s;
@@ -187,6 +187,7 @@ a {
 .check {
     height: 1px;
     width: 1px;
+    z-index: 5;
     position: absolute;
     opacity: 0;
 

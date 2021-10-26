@@ -10,9 +10,7 @@
 </head>
 <body>
 
-    <script src="js/main.min.js"></script>
-</body>
-</html>
+
     
     <header class="header header--black">
     <div class="container">
@@ -82,7 +80,7 @@
                 Pickup
             </label>
             <select class="auto-form__select" name="[auto]select" id="place1" required>
-                <option>Munich, Germany (MUC-Franz Josef Stra…</option>
+                <option value="Munich, Germany (MUC-Franz Josef Stra…">Munich, Germany (MUC-Franz Josef Stra…</option>
             </select>
         </div>
         
@@ -92,7 +90,7 @@
                 Drop-off
             </label>
             <select class="auto-form__select" name="[auto]select" id="place2" required>
-                <option>Cologne, Germany (CGN-Cologne - Bonn)</option>
+                <option value="Cologne, Germany (CGN-Cologne - Bonn)">Cologne, Germany (CGN-Cologne - Bonn)</option>
             </select>
         </div>
     </div>
@@ -103,16 +101,16 @@
                 Duration
             </label>
             <select class="auto-form__select auto-form__select--date" name="[auto]search" type="search" id="auto-search1" required>
-                <option>1 Day</option>
-                <option>2 Days</option>
-                <option selected>3 Days</option>
-                <option>4 Days</option>
-                <option>5 Days</option>
-                <option>6 Days</option>
-                <option>7 Days</option>
-                <option>8 Days</option>
-                <option>9 Days</option>
-                <option>10 Days</option>
+                <option value="1">1 Day</option>
+                <option value="2">2 Days</option>
+                <option value="3" selected>3 Days</option>
+                <option value="4">4 Days</option>
+                <option value="5">5 Days</option>
+                <option value="6">6 Days</option>
+                <option value="7">7 Days</option>
+                <option value="8">8 Days</option>
+                <option value="9">9 Days</option>
+                <option value="10">10 Days</option>
             </select>
         </div>
         <button class="auto-form__btn btn btn--green" type="submit">
@@ -134,21 +132,23 @@
                     </button>
                     
                     <div class="auto-park__filters">
-    <button class="auto-park__btn-close btn--close">
+    <button class="auto-park__btn-close btn btn--close" type="button">
         <span class="sr-only">close filters</span>
         <span></span>
     </button>
-    <span class="auto-park__filters-title">
-        Filters<span>2</span>
-    </span>
-    <div class="auto-park__filters-box auto-park__filters-box--type active">
-        <button class="auto-park__btn btn btn--type active" type="button" id="auto">
-            Vehicle type <span class="auto-park__arrow"></span>
+    <p class="auto-park__filters-title">
+        Filters
+        <a id="clicks">0</a>
+    </p>
+    <div class="auto-park__filters-box auto-park__filters-box--type" box>
+        <button class="auto-park__btn btn btn--type" type="button" id="btn">
+            Vehicle type 
+            <span class="auto-park__arrow"></span>
         </button>
 
         <div class="auto-park__wrapper">
-            <label class="auto-park__label active" for="economy">Economy</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="economy" checked>
+            <label class="auto-park__label" for="economy"> Economy</label>
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="economy" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -156,7 +156,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="compact">Compact</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="compact">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="compact" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -164,7 +164,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="midsize">Midsize</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="midsize">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="midsize" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -172,7 +172,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="standard">Standard</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="standard">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="standard" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -180,7 +180,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="fullsize">Fullsize</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="fullsize">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="fullsize" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -188,7 +188,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="premium">Premium</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="premium">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="premium" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>   
@@ -196,7 +196,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="luxury">Luxury</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="luxury">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="luxury" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -204,7 +204,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="convertible">Convertible</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="convertible">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="convertible" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -212,7 +212,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="minivan">Minivan</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="minivan">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="minivan" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -220,7 +220,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="sport-utility">Sport Utility</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="sport-utility">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="sport-utility" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -228,23 +228,24 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="sports">Sports car</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="sports">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="sports" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
         </div>
         
     </div>
-    <div class="auto-park__filters-box auto-park__filters-box--range active">
-        <button class="auto-park__btn btn btn--range active" type="button">
-            Price Range <span></span>
+    <div class="auto-park__filters-box auto-park__filters-box--range">
+        <button class="auto-park__btn btn btn--range" type="button">
+            Price Range 
+            <span></span>
         </button>
 
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="fifty">
                 <span>$</span>50<span>-</span>100
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[price]check" id="fifty">
+            <input class="auto-park__input-check check" type="checkbox" name="[price]check" id="fifty" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -254,17 +255,17 @@
             <label class="auto-park__label" for="one">
                 <span>$</span>100<span>-</span>200
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[price]check" id="one">
+            <input class="auto-park__input-check check" type="checkbox" name="[price]check" id="one" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
         </div>
         
         <div class="auto-park__wrapper">
-            <label class="auto-park__label active" for="two">
+            <label class="auto-park__label" for="two">
                 <span>$</span>200<span>-</span>500
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[price]check" id="two" checked>
+            <input class="auto-park__input-check check" type="checkbox" name="[price]check" id="two" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -274,7 +275,7 @@
             <label class="auto-park__label" for="five">
                 <span>$</span>500<span>-</span>1000<span>+</span>
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[price]check" id="five">
+            <input class="auto-park__input-check check" type="checkbox" name="[price]check" id="five" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -283,14 +284,15 @@
     </div>
     <div class="auto-park__filters-box auto-park__filters-box--size">
         <button class="auto-park__btn btn btn--size" type="button">
-            Party Size<span></span>
+            Party Size
+            <span></span>
         </button>
 
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="full">
                 Full-size SUV
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[party-size]check" id="full">
+            <input class="auto-park__input-check check" type="checkbox" name="[party-size]check" id="full" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -300,7 +302,7 @@
             <label class="auto-park__label" for="intermed">
                 intermediate
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[party-size]check" id="intermed">
+            <input class="auto-park__input-check check" type="checkbox" name="[party-size]check" id="intermed" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -309,14 +311,15 @@
     </div>
     <div class="auto-park__filters-box auto-park__filters-box--specific">
         <button class="auto-park__btn btn btn--specific" type="button">
-            Specifications  <span></span>
+            Specifications  
+            <span></span>
         </button>
 
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="automatic">
                 Automatic transmission
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="automatic">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="automatic" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -326,7 +329,7 @@
             <label class="auto-park__label" for="air">
                 Air-conditioning
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="air">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="air" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -336,7 +339,7 @@
             <label class="auto-park__label" for="mileage">
                 Unlimited mileage
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="mileage">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="mileage" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -346,7 +349,7 @@
             <label class="auto-park__label" for="hatch">
                 Hatchback
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="hatch">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="hatch" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -356,7 +359,7 @@
             <label class="auto-park__label" for="sedan">
                 Sedan
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="sedan">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="sedan" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -366,7 +369,7 @@
             <label class="auto-park__label" for="combi">
                 Combi
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="combi">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="combi" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -376,7 +379,7 @@
             <label class="auto-park__label" for="limousine">
                 Limousine
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="limousine">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="limousine" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -393,8 +396,8 @@
                             <div class="auto-park__cars-wrapper">
                                 <label class="auto-park__cars-label" for="select-price">Sort by</label>
                                 <select class="auto-park__price" name="[price]select" id="select-price" >
-                                    <option value="Price:">Price: High to Low</option>
-                                    <option>Price: Low to Hight</option>
+                                    <option value="High to Low" selected>Price: High to Low</option>
+                                    <option value="Low to Hight">Price: Low to Hight</option>
                                 </select>
                             </div>
                         </div>
@@ -406,7 +409,9 @@
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -414,21 +419,20 @@
                         Mercedes-Benz E200/220 or similar
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Sedan
                             </a>
                         </li>
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 PDAR
                             </a>
                         </li>
-                    
                     
                 </ul>
     
@@ -479,7 +483,9 @@
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-2.jpg" alt="Volkswagen Passat Estate" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-2.jpg" alt="Volkswagen Passat Estate" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -487,15 +493,14 @@
                         Volkswagen Passat Estate
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Estate
                             </a>
                         </li>
-                    
                     
                 </ul>
     
@@ -546,7 +551,9 @@
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-3.jpg" alt="Intermediate, 4-5 Door, Manual, Aircon (Group E)" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-3.jpg" alt="Intermediate, 4-5 Door, Manual, Aircon (Group E)" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -554,21 +561,20 @@
                         Intermediate, 4-5 Door, Manual, Aircon (Group E)
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Sedan
                             </a>
                         </li>
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 PDAR
                             </a>
                         </li>
-                    
                     
                 </ul>
     
@@ -619,7 +625,9 @@
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -627,21 +635,20 @@
                         Mercedes-Benz E200/220 or similar
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Sedan
                             </a>
                         </li>
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 PDAR
                             </a>
                         </li>
-                    
                     
                 </ul>
     
@@ -692,7 +699,9 @@
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-2.jpg" alt="Volkswagen Passat Estate" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-2.jpg" alt="Volkswagen Passat Estate" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -700,15 +709,14 @@
                         Volkswagen Passat Estate
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Estate
                             </a>
                         </li>
-                    
                     
                 </ul>
     
@@ -759,7 +767,9 @@
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-3.jpg" alt="Intermediate, 4-5 Door, Manual, Aircon (Group E)" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-3.jpg" alt="Intermediate, 4-5 Door, Manual, Aircon (Group E)" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -767,21 +777,20 @@
                         Intermediate, 4-5 Door, Manual, Aircon (Group E)
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Sedan
                             </a>
                         </li>
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 PDAR
                             </a>
                         </li>
-                    
                     
                 </ul>
     
@@ -832,7 +841,9 @@
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -840,21 +851,20 @@
                         Mercedes-Benz E200/220 or similar
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Sedan
                             </a>
                         </li>
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 PDAR
                             </a>
                         </li>
-                    
                     
                 </ul>
     
@@ -905,7 +915,9 @@
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-2.jpg" alt="Volkswagen Passat Estate" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-2.jpg" alt="Volkswagen Passat Estate" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -913,15 +925,14 @@
                         Volkswagen Passat Estate
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Estate
                             </a>
                         </li>
-                    
                     
                 </ul>
     
@@ -972,7 +983,9 @@
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-3.jpg" alt="Intermediate, 4-5 Door, Manual, Aircon (Group E)" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-3.jpg" alt="Intermediate, 4-5 Door, Manual, Aircon (Group E)" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -980,21 +993,20 @@
                         Intermediate, 4-5 Door, Manual, Aircon (Group E)
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Sedan
                             </a>
                         </li>
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 PDAR
                             </a>
                         </li>
-                    
                     
                 </ul>
     
@@ -1045,7 +1057,9 @@
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -1053,21 +1067,20 @@
                         Mercedes-Benz E200/220 or similar
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Sedan
                             </a>
                         </li>
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 PDAR
                             </a>
                         </li>
-                    
                     
                 </ul>
     
@@ -1118,7 +1131,9 @@
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-2.jpg" alt="Volkswagen Passat Estate" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-2.jpg" alt="Volkswagen Passat Estate" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -1126,15 +1141,14 @@
                         Volkswagen Passat Estate
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Estate
                             </a>
                         </li>
-                    
                     
                 </ul>
     
@@ -1185,7 +1199,9 @@
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-3.jpg" alt="Intermediate, 4-5 Door, Manual, Aircon (Group E)" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-3.jpg" alt="Intermediate, 4-5 Door, Manual, Aircon (Group E)" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -1193,21 +1209,20 @@
                         Intermediate, 4-5 Door, Manual, Aircon (Group E)
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Sedan
                             </a>
                         </li>
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 PDAR
                             </a>
                         </li>
-                    
                     
                 </ul>
     
@@ -1271,18 +1286,18 @@
                     <label class="footer__label" for="select1">Site Language/Currency
                     </label>
                     <select class="footer__select" name="[footer]select" id="select1">
-                        <option>English</option>
-                        <option>Deutsch</option>
-                        <option>Czech</option>
+                        <option value="English" selected>English</option>
+                        <option value="Deutsch">Deutsch</option>
+                        <option value="Czech">Czech</option>
                     </select>
                     
                     <label class="footer__label" for="select2">
                         <span class="sr-only">Currency</span>
                     </label>
                     <select class="footer__select footer__select--currency" name="[footer]select" id="select2">
-                        <option>Usd</option>
-                        <option>Eur</option>
-                        <option>Czk</option>
+                        <option value="Usd">Usd</option>
+                        <option value="Eur">Eur</option>
+                        <option value="Czk">Czk</option>
                     </select>
                 </div>
                 <nav class="footer__nav-top">
@@ -1381,3 +1396,7 @@
         </div>
     </div>
 </footer>
+
+        <script src="js/main.min.js"></script>
+    </body>
+</html>

@@ -45,16 +45,16 @@ $(function() {
         }
     });
 
-    $('.tabs-btn__btn').on('click', function() {
-        $('.tabs-btn__btn').removeClass('active');
+    $('.tabs-btns__btn').on('click', function() {
+        $('.tabs-btns__btn').removeClass('active');
         $(this).addClass('active')
     });
 
-    $('.tabs-btn__btn--different').on('click', function() {
+    $('.tabs-btns__btn--different').on('click', function() {
         $('.hero-form__date--different').addClass('active')
     })
 
-    $('.tabs-btn__btn--same').on('click', function() {
+    $('.tabs-btns__btn--same').on('click', function() {
         $('.hero-form__date--different').removeClass('active')
     })
 
@@ -91,13 +91,11 @@ $(function() {
     })
 
     const cards = document.querySelectorAll('.auto-park .auto-park__wrapper');
-
     cards.forEach((card)=>{
             card.querySelector('.auto-park__label').addEventListener('click', () => {
             card.querySelector('.auto-park__label').classList.toggle('active');
         });
     })
-
 
     $('.top-picks__big-slider').slick({
         asNavFor: '.top-picks__thumb-slider',
@@ -193,23 +191,43 @@ $(function() {
             })
         }
     })
+
+    window.increment = function(event) {
+        var btn = event.target;
+        btn.clicks = ((btn.clicks || 0) + 1) % 2;
+        window.clicks = (window.clicks || 0) + btn.clicks * 2 - 1;
+        document.getElementById("clicks").innerText = window.clicks;
+    }
 });
 
 let dpMin, dpMax;
 
-function openContent(evt, contentName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("rent-info__item");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("btn--info");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(contentName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+let tab = function () {
+    let tabNav = document.querySelectorAll('.btn--info'),
+        tabContent = document.querySelectorAll('.rent-info__item'),
+        tabName;
 
-document.getElementById("defaultOpen").click();
+    tabNav.forEach(item => {
+        item.addEventListener('click', selectTabNav)
+    });
 
+    function selectTabNav() {
+        tabNav.forEach(item => {
+            item.classList.remove('active');
+        });
+        this.classList.add('active');
+        tabName = this.getAttribute('data-content');
+        selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+        tabContent.forEach(item => {
+            item.classList.contains(tabName) ? item.classList.add('active') : item.classList.remove('active');
+        })
+    }
+
+};
+
+tab();
+
+    

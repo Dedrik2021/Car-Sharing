@@ -10,9 +10,7 @@
 </head>
 <body>
 
-    <script src="js/main.min.js"></script>
-</body>
-</html>
+
     
     <header class="header header--black">
     <div class="container">
@@ -82,7 +80,7 @@
                 Pickup
             </label>
             <select class="auto-form__select" name="[auto]select" id="place1" required>
-                <option>Munich, Germany (MUC-Franz Josef Stra…</option>
+                <option value="Munich, Germany (MUC-Franz Josef Stra…">Munich, Germany (MUC-Franz Josef Stra…</option>
             </select>
         </div>
         
@@ -92,7 +90,7 @@
                 Drop-off
             </label>
             <select class="auto-form__select" name="[auto]select" id="place2" required>
-                <option>Cologne, Germany (CGN-Cologne - Bonn)</option>
+                <option value="Cologne, Germany (CGN-Cologne - Bonn)">Cologne, Germany (CGN-Cologne - Bonn)</option>
             </select>
         </div>
     </div>
@@ -103,16 +101,16 @@
                 Duration
             </label>
             <select class="auto-form__select auto-form__select--date" name="[auto]search" type="search" id="auto-search1" required>
-                <option>1 Day</option>
-                <option>2 Days</option>
-                <option selected>3 Days</option>
-                <option>4 Days</option>
-                <option>5 Days</option>
-                <option>6 Days</option>
-                <option>7 Days</option>
-                <option>8 Days</option>
-                <option>9 Days</option>
-                <option>10 Days</option>
+                <option value="1">1 Day</option>
+                <option value="2">2 Days</option>
+                <option value="3" selected>3 Days</option>
+                <option value="4">4 Days</option>
+                <option value="5">5 Days</option>
+                <option value="6">6 Days</option>
+                <option value="7">7 Days</option>
+                <option value="8">8 Days</option>
+                <option value="9">9 Days</option>
+                <option value="10">10 Days</option>
             </select>
         </div>
         <button class="auto-form__btn btn btn--green" type="submit">
@@ -123,15 +121,20 @@
 
                 </div>
             </div>
-            <div class="rent-info__wrapper">
-                <div class="container">
+            
+            <div class="container">
+                <div class="rent-info__content">
+                    <div class="rent-info__inner">
+                        <div class="rent-info__wrapper">
 
-                    <article class="auto-card">
+                            <article class="auto-card">
     
     
         <div class="auto-card__box">
             <div class="auto-card__img-wrapper">
-                <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+                <a class="auto-card__img-link" href="/rent-info.html">
+                    <img src="images/content/auto-card-1.jpg" alt="Mercedes-Benz E200/220" width="205" height="120">
+                </a>
             </div>
             <div class="auto-card__wrapper-box">
                 <a class="auto-card__link" href="/rent-info.html">
@@ -139,59 +142,54 @@
                         Mercedes-Benz E200/220 or similar
                     </h3> 
                 </a>
-                <ul class="tag">
+                <ul class="tags">
     
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 Sedan
                             </a>
                         </li>
                     
-                        <li class="tag__item">
-                            <a class="tag__link" href="undefined.html">
+                        <li class="tags__item">
+                            <a class="tags__link" href="undefined.html">
                                 PDAR
                             </a>
                         </li>
-                    
                     
                 </ul>
     
 
     
     
-        <div class="auto-card__advantages">
-            <div class="auto-card__advantages-item">
+        <ul class="auto-card__advantages">
+            <li class="auto-card__advantages-item">
                 <span> Manual transmission</span>
-            </div>
-            <div class="auto-card__advantages-item">
+            </li>
+            <li class="auto-card__advantages-item">
                 <span>Unlimited mileage</span>
-            </div>
-            <div class="auto-card__advantages-item">
+            </li>
+            <li class="auto-card__advantages-item">
                 <span>Navigation system</span> 
-            </div>
-        </div>
+            </li>
+        </ul>
     
 
     
 
 </article>
-
-                </div>
-            </div>
-            <div class="container">
-                <div class="rent-info__content">
-                    <div class="rent-info__inner">
+                            
+                        </div>
                         <div class="rent-info__tabs">
 
-                            <ul class="tabs-btn">
-    <li class="tabs-btn__item">
-        <button class="tabs-btn__btn tabs-btn__btn--same btn btn--info active" type="button" onclick="openContent(event, 'included')" id="defaultOpen">
+                            <ul class="tabs-btns">
+    <li class="tabs-btns__item">
+        <button class="tabs-btns__btn tabs-btns__btn--same btn btn--info active" type="button" data-content="rent-info__item--included">
             What’s included
         </button>
     </li>
-    <li class="tabs-btn__item">
-        <button class="tabs-btn__btn tabs-btn__btn--different btn btn--info" type="button" onclick="openContent(event, 'not-included')">
+    <li class="tabs-btns__item">
+        <button class="tabs-btns__btn tabs-btns__btn--different btn btn--info" type="button" data-content="rent-info__item--not-included">
             Not included in rate
         </button>
     </li>
@@ -199,7 +197,7 @@
 
 
                             <ul class="rent-info__list">
-    <li class="rent-info__item" id="included">
+    <li class="rent-info__item rent-info__item--included active">
         <div>
             <p>
                 In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
@@ -209,7 +207,7 @@
             </p>
         </div>
     </li>
-    <li class="rent-info__item" id="not-included">
+    <li class="rent-info__item rent-info__item--not-included">
         <div>
             <p>
                 In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.In pharetra, quam a blandit dapibus, lorem ligula ornare odio, et mollis nisi ipsum a est. Suspendisse dignissim sed dolor a mattis. Praesent vulputate leo sed nibh pretium viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
@@ -237,9 +235,9 @@
     </div>
     <ul class="accessories">
         <li class="accessories__item">
-            <input class="accessories__check check" type="checkbox" name="[accessories]checkbox" id="ski" checked required>
+            <input class="accessories__check check" type="checkbox" name="[accessories]checkbox" id="ski" required>
             <div class="accessories__checkbox checkbox"><span></span></div>
-            <label class="accessories__label active" for="ski" id="accessories-ski" tabindex="0">
+            <label class="accessories__label" for="ski" id="accessories-ski" tabindex="0">
                 <span class="accessories__box">
                     <span class="accessories__stuff">Ski rack</span>
                     <span class="accessories__price"><span>$</span>110</span>
@@ -279,6 +277,7 @@
     </ul>
 </div>
                         
+                        
                     </div>
                     <div class="rent-info__box">
                         <div class="rent-info__discount">
@@ -293,9 +292,11 @@
                             <div class="rent-info__total">
                                 <span class="rent-info__sum">
                                     <span class="rent-info__sum-title">
-                                        Total 
-                                    <span>$<span>149</span></span>
-                                </span>
+                                                Total 
+                                        <span>
+                                            $<span>149</span>
+                                        </span>
+                                    </span>
                                 </span>
                                 <span class="rent-info__includes">
                                     *includes taxes and fees
@@ -304,7 +305,6 @@
                             <a class="rent-info__btn btn btn--yellow-hover" href="#">
                                 Book now
                             </a>
-                            
                         </div>
                         <div class="rent-info__contract">
                             <div class="rent-info__items">
@@ -426,7 +426,7 @@
         </span>
         <div class="top-cart__wrapper">
             <div class="top-cart__price">
-                <span>$<span>36</span></span>
+                <span>$<span>41</span></span>
                 per day
             </div>
             <a class="top-cart__btn btn btn--yellow-hover" href="#">View</a>
@@ -450,7 +450,7 @@
         </span>
         <div class="top-cart__wrapper">
             <div class="top-cart__price">
-                <span>$<span>36</span></span>
+                <span>$<span>45</span></span>
                 per day
             </div>
             <a class="top-cart__btn btn btn--yellow-hover" href="#">View</a>
@@ -474,7 +474,7 @@
         </span>
         <div class="top-cart__wrapper">
             <div class="top-cart__price">
-                <span>$<span>36</span></span>
+                <span>$<span>40</span></span>
                 per day
             </div>
             <a class="top-cart__btn btn btn--yellow-hover" href="#">View</a>
@@ -522,7 +522,7 @@
         </span>
         <div class="top-cart__wrapper">
             <div class="top-cart__price">
-                <span>$<span>36</span></span>
+                <span>$<span>41</span></span>
                 per day
             </div>
             <a class="top-cart__btn btn btn--yellow-hover" href="#">View</a>
@@ -546,7 +546,7 @@
         </span>
         <div class="top-cart__wrapper">
             <div class="top-cart__price">
-                <span>$<span>36</span></span>
+                <span>$<span>45</span></span>
                 per day
             </div>
             <a class="top-cart__btn btn btn--yellow-hover" href="#">View</a>
@@ -570,7 +570,7 @@
         </span>
         <div class="top-cart__wrapper">
             <div class="top-cart__price">
-                <span>$<span>36</span></span>
+                <span>$<span>40</span></span>
                 per day
             </div>
             <a class="top-cart__btn btn btn--yellow-hover" href="#">View</a>
@@ -597,18 +597,18 @@
                     <label class="footer__label" for="select1">Site Language/Currency
                     </label>
                     <select class="footer__select" name="[footer]select" id="select1">
-                        <option>English</option>
-                        <option>Deutsch</option>
-                        <option>Czech</option>
+                        <option value="English" selected>English</option>
+                        <option value="Deutsch">Deutsch</option>
+                        <option value="Czech">Czech</option>
                     </select>
                     
                     <label class="footer__label" for="select2">
                         <span class="sr-only">Currency</span>
                     </label>
                     <select class="footer__select footer__select--currency" name="[footer]select" id="select2">
-                        <option>Usd</option>
-                        <option>Eur</option>
-                        <option>Czk</option>
+                        <option value="Usd">Usd</option>
+                        <option value="Eur">Eur</option>
+                        <option value="Czk">Czk</option>
                     </select>
                 </div>
                 <nav class="footer__nav-top">
@@ -707,3 +707,7 @@
         </div>
     </div>
 </footer>
+
+        <script src="js/main.min.js"></script>
+    </body>
+</html>

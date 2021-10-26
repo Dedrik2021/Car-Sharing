@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,9 +10,7 @@
 </head>
 <body>
 
-    <script src="js/main.min.js"></script>
-</body>
-</html>
+
     
     <header class="header @@class">
     <div class="container">
@@ -73,14 +71,14 @@
                         Find your ideal car from 500<span>+</span> cars
                     </h1>
                     
-                    <ul class="tabs-btn">
-    <li class="tabs-btn__item">
-        <button class="tabs-btn__btn tabs-btn__btn--same btn btn--info active" type="button" onclick="openContent(event, 'included')" id="defaultOpen">
+                    <ul class="tabs-btns">
+    <li class="tabs-btns__item">
+        <button class="tabs-btns__btn tabs-btns__btn--same btn btn--info active" type="button" data-content="rent-info__item--included">
             Same as Drop-off
         </button>
     </li>
-    <li class="tabs-btn__item">
-        <button class="tabs-btn__btn tabs-btn__btn--different btn btn--info" type="button" onclick="openContent(event, 'not-included')">
+    <li class="tabs-btns__item">
+        <button class="tabs-btns__btn tabs-btns__btn--different btn btn--info" type="button" data-content="rent-info__item--not-included">
             Different Drop-off
         </button>
     </li>
@@ -528,18 +526,18 @@
                     <label class="footer__label" for="select1">Site Language/Currency
                     </label>
                     <select class="footer__select" name="[footer]select" id="select1">
-                        <option>English</option>
-                        <option>Deutsch</option>
-                        <option>Czech</option>
+                        <option value="English" selected>English</option>
+                        <option value="Deutsch">Deutsch</option>
+                        <option value="Czech">Czech</option>
                     </select>
                     
                     <label class="footer__label" for="select2">
                         <span class="sr-only">Currency</span>
                     </label>
                     <select class="footer__select footer__select--currency" name="[footer]select" id="select2">
-                        <option>Usd</option>
-                        <option>Eur</option>
-                        <option>Czk</option>
+                        <option value="Usd">Usd</option>
+                        <option value="Eur">Eur</option>
+                        <option value="Czk">Czk</option>
                     </select>
                 </div>
                 <nav class="footer__nav-top">
@@ -638,3 +636,7 @@
         </div>
     </div>
 </footer>
+
+        <script src="js/main.min.js"></script>
+    </body>
+</html>

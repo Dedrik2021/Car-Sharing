@@ -1,19 +1,21 @@
 <div class="auto-park__filters">
-    <button class="auto-park__btn-close btn--close">
+    <button class="auto-park__btn-close btn btn--close" type="button">
         <span class="sr-only">close filters</span>
         <span></span>
     </button>
-    <span class="auto-park__filters-title">
-        Filters<span>2</span>
-    </span>
-    <div class="auto-park__filters-box auto-park__filters-box--type active">
-        <button class="auto-park__btn btn btn--type active" type="button" id="auto">
-            Vehicle type <span class="auto-park__arrow"></span>
+    <p class="auto-park__filters-title">
+        Filters
+        <a id="clicks">0</a>
+    </p>
+    <div class="auto-park__filters-box auto-park__filters-box--type" box>
+        <button class="auto-park__btn btn btn--type" type="button" id="btn">
+            Vehicle type 
+            <span class="auto-park__arrow"></span>
         </button>
 
         <div class="auto-park__wrapper">
-            <label class="auto-park__label active" for="economy">Economy</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="economy" checked>
+            <label class="auto-park__label" for="economy"> Economy</label>
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="economy" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -21,7 +23,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="compact">Compact</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="compact">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="compact" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -29,7 +31,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="midsize">Midsize</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="midsize">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="midsize" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -37,7 +39,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="standard">Standard</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="standard">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="standard" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -45,7 +47,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="fullsize">Fullsize</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="fullsize">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="fullsize" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -53,7 +55,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="premium">Premium</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="premium">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="premium" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>   
@@ -61,7 +63,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="luxury">Luxury</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="luxury">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="luxury" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -69,7 +71,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="convertible">Convertible</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="convertible">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="convertible" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -77,7 +79,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="minivan">Minivan</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="minivan">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="minivan" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -85,7 +87,7 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="sport-utility">Sport Utility</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="sport-utility">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="sport-utility" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -93,23 +95,24 @@
         
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="sports">Sports car</label>
-            <input class="auto-park__check check" type="checkbox" name="[type]check" id="sports">
+            <input class="auto-park__input-check check" type="checkbox" name="[type]check" id="sports" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
         </div>
         
     </div>
-    <div class="auto-park__filters-box auto-park__filters-box--range active">
-        <button class="auto-park__btn btn btn--range active" type="button">
-            Price Range <span></span>
+    <div class="auto-park__filters-box auto-park__filters-box--range">
+        <button class="auto-park__btn btn btn--range" type="button">
+            Price Range 
+            <span></span>
         </button>
 
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="fifty">
                 <span>$</span>50<span>-</span>100
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[price]check" id="fifty">
+            <input class="auto-park__input-check check" type="checkbox" name="[price]check" id="fifty" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -119,17 +122,17 @@
             <label class="auto-park__label" for="one">
                 <span>$</span>100<span>-</span>200
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[price]check" id="one">
+            <input class="auto-park__input-check check" type="checkbox" name="[price]check" id="one" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
         </div>
         
         <div class="auto-park__wrapper">
-            <label class="auto-park__label active" for="two">
+            <label class="auto-park__label" for="two">
                 <span>$</span>200<span>-</span>500
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[price]check" id="two" checked>
+            <input class="auto-park__input-check check" type="checkbox" name="[price]check" id="two" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -139,7 +142,7 @@
             <label class="auto-park__label" for="five">
                 <span>$</span>500<span>-</span>1000<span>+</span>
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[price]check" id="five">
+            <input class="auto-park__input-check check" type="checkbox" name="[price]check" id="five" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -148,14 +151,15 @@
     </div>
     <div class="auto-park__filters-box auto-park__filters-box--size">
         <button class="auto-park__btn btn btn--size" type="button">
-            Party Size<span></span>
+            Party Size
+            <span></span>
         </button>
 
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="full">
                 Full-size SUV
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[party-size]check" id="full">
+            <input class="auto-park__input-check check" type="checkbox" name="[party-size]check" id="full" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -165,7 +169,7 @@
             <label class="auto-park__label" for="intermed">
                 intermediate
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[party-size]check" id="intermed">
+            <input class="auto-park__input-check check" type="checkbox" name="[party-size]check" id="intermed" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -174,14 +178,15 @@
     </div>
     <div class="auto-park__filters-box auto-park__filters-box--specific">
         <button class="auto-park__btn btn btn--specific" type="button">
-            Specifications  <span></span>
+            Specifications  
+            <span></span>
         </button>
 
         <div class="auto-park__wrapper">
             <label class="auto-park__label" for="automatic">
                 Automatic transmission
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="automatic">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="automatic" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -191,7 +196,7 @@
             <label class="auto-park__label" for="air">
                 Air-conditioning
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="air">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="air" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -201,7 +206,7 @@
             <label class="auto-park__label" for="mileage">
                 Unlimited mileage
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="mileage">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="mileage" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -211,7 +216,7 @@
             <label class="auto-park__label" for="hatch">
                 Hatchback
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="hatch">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="hatch" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -221,7 +226,7 @@
             <label class="auto-park__label" for="sedan">
                 Sedan
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="sedan">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="sedan" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -231,7 +236,7 @@
             <label class="auto-park__label" for="combi">
                 Combi
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="combi">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="combi" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
@@ -241,7 +246,7 @@
             <label class="auto-park__label" for="limousine">
                 Limousine
             </label>
-            <input class="auto-park__check check" type="checkbox" name="[specification]check" id="limousine">
+            <input class="auto-park__input-check check" type="checkbox" name="[specification]check" id="limousine" onclick="window.increment(event)">
             <div class="auto-park__checkbox checkbox">
                 <span></span>
             </div>
