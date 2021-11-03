@@ -59,19 +59,19 @@ $(function() {
     })
 
     $('.btn--range').on('click', function() {
-        $('.auto-park__filters-box--range, .btn--range').toggleClass('active')
+        $('.btn--range').toggleClass('active')
     })
 
     $('.btn--type').on('click', function() {
-        $('.auto-park__filters-box--type, .btn--type').toggleClass('active')
+        $('.btn--type').toggleClass('active')
     })
 
     $('.btn--size').on('click', function() {
-        $('.auto-park__filters-box--size, .btn--size').toggleClass('active')
+        $('.btn--size').toggleClass('active')
     })
 
     $('.btn--specific').on('click', function() {
-        $('.auto-park__filters-box--specific, .btn--specific').toggleClass('active')
+        $('.btn--specific').toggleClass('active')
     })
 
     $('#accessories-ski').on('click', function() {
@@ -198,6 +198,30 @@ $(function() {
         window.clicks = (window.clicks || 0) + btn.clicks * 2 - 1;
         document.getElementById("clicks").innerText = window.clicks;
     }
+
+    $( ".btn--type" ).click(function() {
+        $( ".auto-park__filters-box--type" ).slideToggle( "slow", function() {
+        
+        });
+    });
+
+    $( ".btn--range" ).click(function() {
+        $( ".auto-park__filters-box--range" ).slideToggle( "slow", function() {
+        
+        });
+    });
+
+    $( ".btn--size" ).click(function() {
+        $( ".auto-park__filters-box--size" ).slideToggle( "slow", function() {
+        
+        });
+    });
+
+    $( ".btn--specific" ).click(function() {
+        $( ".auto-park__filters-box--specific" ).slideToggle( "slow", function() {
+        
+        });
+    });
 });
 
 let dpMin, dpMax;
@@ -229,5 +253,3 @@ let tab = function () {
 };
 
 tab();
-
-    

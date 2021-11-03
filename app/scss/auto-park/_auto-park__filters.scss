@@ -4,7 +4,7 @@
         max-width: 320px;
         width: 100%;
         position: absolute;
-        padding: 25px 25px 210px 15px;
+        padding: 25px 25px 210px 20px;
         border: 1px solid $white-300;
         border-radius: 5px;
         margin-right: 20px;
@@ -51,7 +51,7 @@
         align-items: center;
         font-size: 22px;
         max-width: 105px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
 
         #clicks {
             display: flex;
@@ -69,79 +69,31 @@
     }
 
     &__filters-box {
-        flex-direction: column;
-        padding: 0px 0 38px;
-        border-bottom: 1px solid $white-300;
-        height: 0;
-        // transition: height 1s, padding 0.4s ease-in-out;
-
-        &--type {
-            padding-top: 15px;
-        }
-
-        &--type,
-        &--size,
-        &--specific,
-        &--range {
-            transition: height 0.4s ease, padding 0.4s;
-
-            &.active {
-                height: auto;
-                padding: 15px 0;
-
-                .auto-park__wrapper {
-                    opacity: 1;
-                    visibility: visible;
-
-                    &:not(:last-child) {
-                        margin-bottom: 10px;
-                    }
-                }
-            }
-        }
-
-        // &--size {
-
-
-        // }
-
-        // &--specific {
-
-
-        // }
-
-        // &.active {
-        //     padding: 15px 0;
-
-        //     .auto-park__wrapper {
-        //         opacity: 1;
-        //         visibility: visible;
-
-        //         &:not(:last-child) {
-        //             margin-bottom: 10px;
-        //         }
-        //     }
-        // }
+        padding: 0px 0 20px;
+        border-bottom: 1px solid $white-300 !important;
+        display: none;
+        transition: height 0.5s, padding 0.4s, ease-in-out;
     }
 
     &__btn {
         justify-content: space-between;
+        width: 100%;
         font-size: 14px;
         text-transform: uppercase;
         letter-spacing: 0.02rem;
         padding: 12px 0 9px;
         border-bottom: 1px solid transparent;
-        transition: border-bottom-color 0.4s, margin-bottom 0.4s;
+        transition: border-bottom-color 0.4s, margin-bottom 0.7s, padding 0.7s;
 
         span {
             height: 7px;
             width: 13px;
-            background-image: url(../../images/content/angle-down-yellow.svg);
+            background-image: url(../images/content/angle-down-yellow.svg);
             background-repeat: no-repeat;
             background-position: center;
             position: relative;
             top: 5px;
-            transition: transform 0.4s;
+            transition: transform 0.7s;
         }
 
         &:hover {
@@ -150,6 +102,7 @@
 
         &.active {
             margin-bottom: 15px;
+            padding-top: 25px;
 
             span {
                 transform: rotate(-180deg);
@@ -167,19 +120,21 @@
         justify-content: flex-end;
         align-items: flex-start;
         position: relative;
-        opacity: 0;
         border-radius: 3px;
-        visibility: hidden;
         background-color: $white;
-        transition: opacity 0.3s ease-out, visibility 0.6s ease-out, margin-bottom 0.4s, background-color 0.4s;
+        transition: background-color 0.4s;
 
         &:hover {
             background-color: $white-200;
         }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
     }
 
     &__label {
-        width: 100%;
+        min-width: 275px;
         font-size: 15px;
         font-weight: 300;
         line-height: 1.6;
@@ -189,6 +144,9 @@
         transition: font-weight 0.5s;
         max-width: 80%;
         word-wrap: break-word;
+        position: relative;
+        z-index: 10;
+        padding-left: 35px;
         @include line-clamp(1);
         transition: border-bottom-color 0.4s, font-weight 0.4s;
 
@@ -198,22 +156,19 @@
     }
 
     &__input-check {
-        left: 6px;
+        left: 3px;
         top: 3px;
         margin: 0;
         opacity: 0;
         width: 15px;
         height: 15px;
-        z-index: 10;
     }
 
     &__checkbox {
-        position: relative;
-        left: 5px;
-        z-index: 5;
+        position: absolute;
+        left: 0px;
         top: 3px;
         background-color: $white;
-        margin-right: 20px;
 
         span {
             left: 3px;

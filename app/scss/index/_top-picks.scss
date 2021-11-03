@@ -14,7 +14,6 @@
         padding-bottom: 50px;
     }
 
-
     &__title {
         font-size: 40px;
         margin-bottom: 55px;
@@ -112,8 +111,6 @@
                     max-width: 550px;
                     height: 290px;
                 }
-
-                
             }
         }
     }
@@ -155,7 +152,6 @@
             margin-bottom: 15px;
             position: relative;
             
-    
             &::before {
                 position: absolute;
                 content: "";
@@ -386,10 +382,5 @@
                 }
             }
         }
-
-        
-
-
-        
     }
 }

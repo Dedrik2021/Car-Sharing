@@ -44,10 +44,37 @@
         }
     }
 
-
     &__wrapper {
         padding-bottom: 20px;
         margin-bottom: 65px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: -55px;
+            right: 0;
+            left: calc((100vw - 1190px) / 2 * -1);
+            bottom: 0;
+            width: 100vw;
+            background-color: $white-400;
+
+            @include r($screen-xl) {
+                left: -20px;
+            }
+
+            @include r($mobile-lg) {
+                left: calc((100vw - 730px) / 2 * -1);
+            }
+
+            @include r($mobile-md) {
+                left: -15px;
+            }
+
+            @include r($mobile-sm) {
+                top: -20px;
+            }
+        }
 
         @include r($mobile-lg) {
             margin-bottom: 40px;
@@ -116,7 +143,7 @@
             font-size: 24px;
         }
 
-        .tag {
+        .tags {
             margin-bottom: 30px;
 
             @include r($mobile-sm) {
@@ -131,10 +158,8 @@
             column-gap: 25px;
 
             @include r($mobile-md) {
-                display: flex;
-                flex-direction: column;
+                grid-template-columns: 1fr;
             }
-
         }
 
         &__advantages-item {
@@ -164,7 +189,6 @@
         }
     }
 
-    
     &__tabs {
         margin-bottom: 85px;
 
@@ -376,12 +400,8 @@
         margin-bottom: 20px;
     }
 
-    &__counter-text,
-    &__counter-title,
-    &__hours,
-    &__time-title,
-    &__address,
-    &__place-title {
+    &__thing,
+    &__thing--title {
         font-weight: 300;
         font-size: 13px;
 
@@ -389,7 +409,7 @@
             font-size: 15px;
         }
     }
-
+    
     &__questions,
     &__touch {
         display: block;
@@ -403,9 +423,7 @@
     }
 
     &__touch,
-    &__counter-title,
-    &__time-title,
-    &__place-title {
+    &__thing--title {
         font-weight: 400;
         display: block;
     }

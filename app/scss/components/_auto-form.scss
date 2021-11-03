@@ -111,8 +111,6 @@
         max-width: 350px;
         width: 100%;
 
-        
-
         @include r($mobile-lg) {
             max-width: 100%;
         }
@@ -251,5 +249,4 @@
             color: $white;
         }
     }
-
 }
